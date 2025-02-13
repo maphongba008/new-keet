@@ -1,4 +1,8 @@
 {
   "name": "Keet",
-  "displayName": "Keet"
+  "displayName": "Keet",
+  "plugins": [
+    "expo-localization",
+    "expo-video"
+  ]
 }
