@@ -7,16 +7,11 @@ import createClient from '@holepunchto/keet-backend-rpc/client';
 import {Worklet} from 'react-native-bare-kit';
 import RPC from 'tiny-buffer-rpc';
 
-// const FileSystem = require('expo-file-system');
+import * as FileSystem from 'expo-file-system';
 
-// const documentDirectory = FileSystem.documentDirectory;
-// console.log({documentDirectory});
-// const storagePath = documentDirectory.substring(
-//   'file://'.length,
-//   documentDirectory.length,
-// );
-import blob from 'react-native-blob-util';
-const storagePath = blob.fs.dirs.DocumentDir + '/';
+const documentDirectory = FileSystem.documentDirectory!;
+console.log({documentDirectory});
+const storagePath = documentDirectory.replace('file://', '');
 
 const source = require('../main.bundle');
 
