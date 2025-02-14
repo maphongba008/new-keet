@@ -21,6 +21,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+main.bundle.js
+mobile-core/
 
 # Android/IntelliJ
 #

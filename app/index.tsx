@@ -1,13 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import React from 'react';
-import {TouchableOpacity, View, Text} from 'react-native';
-
 import createClient from '@holepunchto/keet-backend-rpc/client';
+import * as FileSystem from 'expo-file-system';
+import React from 'react';
+import {Alert, Text, TouchableOpacity, View} from 'react-native';
 import {Worklet} from 'react-native-bare-kit';
 import RPC from 'tiny-buffer-rpc';
-
-import * as FileSystem from 'expo-file-system';
 
 const documentDirectory = FileSystem.documentDirectory!;
 console.log({documentDirectory});
