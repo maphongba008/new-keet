@@ -1,0 +1,23 @@
+name: 🕙 Make Daily Build
+run-name: Scheduled build on ${{ github.event.repository.updated_at }}
+
+on:
+  # POSIX cron syntax - https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+  schedule:
+    - cron: '0 7 * * *' # Run at 07:00 GMT every day
+
+jobs:
+  build:
+    name: run build workflow
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Trigger build workflow
+        id: build-config
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run build.yml -f isScheduledBuild=true

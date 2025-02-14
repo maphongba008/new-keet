@@ -1,0 +1,105 @@
+name: 🤹 Bump Dependencies
+
+on:
+  workflow_dispatch:
+    inputs:
+      coreVersion:
+        description: 'Set new mobile core version'
+        required: false
+        type: number
+      keet_core_api_version:
+        description: 'Set new keet-core-api version'
+        required: false
+      keet_store_version:
+        description: 'Set new keet-store version'
+        required: false
+      keet_call_version:
+        description: 'Set new keet-call version'
+        required: false
+      webrtc_version:
+        description: 'Set new webrtc version'
+        required: false
+      emojis_version:
+        description: 'Set new emojis version'
+        required: false
+
+jobs:
+  prebuild:
+    name: Update package versions
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      packages: read
+
+    steps:
+      - name: Check out repository 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configure Git ⚙️
+        id: git-config
+        run: |
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'bot@github.actions.com'
+
+      - name: Update Mobile Core version
+        if: github.event.inputs.coreVersion
+        run: |
+          file="${GITHUB_WORKSPACE}/package.json"
+          sed -i 's/"drive:mobile-core": "drives mirror --version [0-9]* d3g35u5f6zq85ir58o9yinaceh98645ghy4upugzjfuwnhqgaq5o mobile-core"/"drive:mobile-core": "drives mirror --version ${{github.event.inputs.coreVersion}} d3g35u5f6zq85ir58o9yinaceh98645ghy4upugzjfuwnhqgaq5o mobile-core"/g' "$file"
+          if ! [[ -z $(git status -s) ]]
+          then
+            git add ./package.json
+            git commit -m "Update mobile core to ${{github.event.inputs.coreVersion}}" --no-verify
+            git push
+          fi
+
+      - name: Set up Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@holepunchto'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Update Keet Call version 🔄
+        if: github.event.inputs.keet_call_version
+        run: source scripts/bump_dependency_version.sh dependency="@holepunchto/keet-call" version="${{ github.event.inputs.keet_call_version }}"
+
+      - name: Update holepunch webrtc version 🔄
+        if: github.event.inputs.webrtc_version
+        run: source scripts/bump_dependency_version.sh dependency="@holepunchto/webrtc" version="${{ github.event.inputs.webrtc_version }}"
+
+      - name: Update Keet Store version 🔄
+        if: github.event.inputs.keet_store_version
+        run: source scripts/bump_dependency_version.sh dependency="@holepunchto/keet-store" version="${{ github.event.inputs.keet_store_version }}"
+
+      - name: Update Emojis version 🔄
+        if: github.event.inputs.emojis_version
+        run: source scripts/bump_dependency_version.sh dependency="@holepunchto/emojis" version="${{ github.event.inputs.emojis_version }}"
+
+      - name: Update Keet Core API version 🔄
+        if: github.event.inputs.keet_core_api_version
+        run: source scripts/bump_dependency_version.sh dependency="@holepunchto/keet-core-api" version="${{ github.event.inputs.keet_core_api_version }}"
+
+      - name: Cache drives
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-drives
+          path: '~/.drives'
+
+      - name: Refresh package.lock 🔄
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install --ignore-scripts
+
+          if ! [[ -z $(git status -s) ]]
+          then
+            echo "package-lock.json is changed"
+            git add ./package-lock.json
+            git commit -m "update package-lock.json"
+            git push
+          fi

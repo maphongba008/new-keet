@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio button component tests should be checked when value is true 1`] = `
+<View
+  accessibilityLabel="radio_btn"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "opacity": 1,
+      },
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="radio_btn"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderColor": "#26D2E8",
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "height": 20,
+        "justifyContent": "center",
+        "marginRight": 8,
+        "width": 20,
+      }
+    }
+    testID="radio_btn_checked"
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "#26D2E8",
+          "borderRadius": 9,
+          "height": 9,
+          "width": 9,
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontFamily": "OpenSans-Regular",
+        "fontSize": 14,
+        "includeFontPadding": false,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Radio button component tests should be unchecked when value is false 1`] = `
+<View
+  accessibilityLabel="radio_btn"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "opacity": 1,
+      },
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="radio_btn"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderColor": "#26D2E8",
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "height": 20,
+        "justifyContent": "center",
+        "marginRight": 8,
+        "width": 20,
+      }
+    }
+    testID="radio_btn_checked"
+  />
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontFamily": "OpenSans-Regular",
+        "fontSize": 14,
+        "includeFontPadding": false,
+      }
+    }
+  />
+</View>
+`;

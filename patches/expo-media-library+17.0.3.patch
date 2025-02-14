@@ -1,0 +1,29 @@
+diff --git a/node_modules/expo-media-library/android/src/main/java/expo/modules/medialibrary/MediaLibraryModule.kt b/node_modules/expo-media-library/android/src/main/java/expo/modules/medialibrary/MediaLibraryModule.kt
+index b928b8f..def5a25 100644
+--- a/node_modules/expo-media-library/android/src/main/java/expo/modules/medialibrary/MediaLibraryModule.kt
++++ b/node_modules/expo-media-library/android/src/main/java/expo/modules/medialibrary/MediaLibraryModule.kt
+@@ -2,7 +2,6 @@ package expo.modules.medialibrary
+ 
+ import android.Manifest.permission.ACCESS_MEDIA_LOCATION
+ import android.Manifest.permission.READ_EXTERNAL_STORAGE
+-import android.Manifest.permission.READ_MEDIA_AUDIO
+ import android.Manifest.permission.READ_MEDIA_IMAGES
+ import android.Manifest.permission.READ_MEDIA_VIDEO
+ import android.Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
+@@ -373,7 +372,6 @@ class MediaLibraryModule : Module() {
+       listOfNotNull(
+         READ_MEDIA_IMAGES.takeIf { granularPermissions.contains(GranularPermission.PHOTO) },
+         READ_MEDIA_VIDEO.takeIf { granularPermissions.contains(GranularPermission.VIDEO) },
+-        READ_MEDIA_AUDIO.takeIf { granularPermissions.contains(GranularPermission.AUDIO) }
+       ).toTypedArray()
+     } else {
+       arrayOf()
+@@ -395,7 +393,7 @@ class MediaLibraryModule : Module() {
+ 
+   private fun hasReadPermissions(): Boolean {
+     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+-      val permissions = mutableListOf(READ_MEDIA_IMAGES, READ_MEDIA_AUDIO, READ_MEDIA_VIDEO)
++      val permissions = mutableListOf(READ_MEDIA_IMAGES, READ_MEDIA_VIDEO)
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+         permissions.add(READ_MEDIA_VISUAL_USER_SELECTED)
+       }

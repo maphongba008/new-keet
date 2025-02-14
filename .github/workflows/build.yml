@@ -1,0 +1,640 @@
+name: 🚀 Make a Build
+run-name: ${{ inputs.buildPlatform != 'none' && format('{0}Building {1} ({2})', inputs.isScheduledBuild && '🕙 ' || '' , inputs.buildPlatform, inputs.buildFlavour) || format('Bump build number {0} Bump version {1}', inputs.skipBuildNumber == false && '✅' || '❌', inputs.bumpVersion != 'none' && '✅' || '❌') }}
+env:
+  # Platform
+  IS_IOS: ${{ inputs.buildPlatform == 'IOS-TestFlight' || inputs.buildPlatform == 'IOS-TestFlight-and-Android-apk' || inputs.buildPlatform == 'All' }}
+  IS_ANDROID: ${{inputs.buildPlatform != 'none' && inputs.buildPlatform != 'IOS-TestFlight' || false }}
+  IS_ANDROID_ALL: ${{ inputs.buildPlatform == 'All' ||  inputs.buildPlatform == 'Android-All' }}
+  IS_ANDROID_APK: ${{ inputs.buildPlatform == 'Android-apk' || inputs.buildPlatform == 'IOS-TestFlight-and-Android-apk' || inputs.buildPlatform == 'All' ||  inputs.buildPlatform == 'Android-All' }}
+  IS_ANDROID_APK_SV: ${{ inputs.buildPlatform == 'Android-apk-SV' || inputs.buildPlatform == 'All' ||  inputs.buildPlatform == 'Android-All' }}
+  IS_ANDROID_AAB: ${{ inputs.buildPlatform == 'Android-aab' || inputs.buildPlatform == 'All' ||  inputs.buildPlatform == 'Android-All' }}
+
+  # Slack
+  SLACK_CHANNEL_ID: ${{ fromJson(inputs.isDebugSlack) && secrets.SLACK_CHANNEL_ID_DEBUG || secrets.SLACK_CHANNEL_ID }}
+  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+
+  # Flavour
+  IS_PROD: ${{ inputs.buildFlavour == 'store' }}
+  IS_INTERNAL: ${{ inputs.buildFlavour == 'internal' }}
+  IS_EXPERIMENTAL: ${{ inputs.buildFlavour == 'experimental' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      buildPlatform:
+        type: choice
+        description: Select platform to build
+        default: IOS-TestFlight-and-Android-apk
+        options:
+          - Android-All
+          - Android-apk
+          - Android-aab
+          - Android-apk-SV
+          - IOS-TestFlight
+          - IOS-TestFlight-and-Android-apk
+          - All
+          - none
+
+      buildFlavour:
+        type: choice
+        description: Select Flavour to build
+        default: internal
+        options:
+          - store
+          - internal
+          - experimental
+
+      skipBuildNumber:
+        type: boolean
+        description: Not increase build number
+        default: false
+
+      bumpVersion:
+        type: choice
+        description: Select version to bump
+        default: none
+        options:
+          - none
+          - major
+          - minor
+          - patch
+
+      isDebugRelease:
+        type: boolean
+        description: Is debug release? (with Sentry)
+        default: true
+
+      isDebugSlack:
+        type: boolean
+        description: Not publish slack status to keet-mobile-build
+        default: false
+
+      isScheduledBuild:
+        type: boolean
+        description: (to Debug scheduled build)
+        default: false
+
+jobs:
+  prebuild:
+    name: Update versions
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    permissions:
+      contents: write
+      packages: read
+    outputs:
+      APP_VERSION: ${{ steps.env-setup.outputs.APP_VERSION }}
+      BUILD_NUMBER: ${{ steps.env-setup.outputs.BUILD_NUMBER }}
+      COMMIT_HASH: ${{ steps.env-setup.outputs.COMMIT_HASH }}
+      IS_ANDROID: ${{ env.IS_ANDROID }}
+      IS_IOS: ${{ env.IS_IOS }}
+      SLACK_THREAD_TS: ${{ steps.slack-info.outputs.SLACK_THREAD_TS }}
+
+    steps:
+      - name: Print all inputs and global env variables
+        id: input-and-env
+        run: |
+
+          echo "Inputs:"
+          echo "${{ toJSON(github.event.inputs) }}"
+
+          echo "Env:"
+          echo "${{ toJSON(env) }}"
+
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Git config
+        id: git-config
+        run: |
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'bot@github.actions.com'
+
+      - name: Bump build number
+        if: ${{ !inputs.skipBuildNumber }}
+        run: bash scripts/version_increment.sh
+
+      - name: Bump version
+        if: ${{ inputs.bumpVersion != 'none' }}
+        run: bash scripts/bump_version.sh ${{ inputs.bumpVersion }}
+
+      - name: Assign Release tag
+        if: ${{ !inputs.skipBuildNumber || inputs.bumpVersion != 'none' }}
+        run: bash scripts/create_release_tag.sh
+
+      - name: Set Github Shared Variables
+        id: env-setup
+        if: fromJSON(env.IS_ANDROID) || fromJSON(env.IS_IOS)
+        run: |
+
+          # define variables
+          source scripts/parse_app_version.sh
+
+          commitHash=$(git rev-parse HEAD)
+          prevReleaseTag=$(git describe --abbrev=0 --tags $(git describe --abbrev=0 --tags HEAD^))
+
+          echo "Previous release tag - $prevReleaseTag"
+
+
+          # set them as GitHub Output variables
+          echo "APP_VERSION=$version" >> $GITHUB_OUTPUT
+          echo "BUILD_NUMBER=$buildNumber" >> $GITHUB_OUTPUT
+          echo "COMMIT_HASH=$commitHash" >> $GITHUB_OUTPUT
+          echo "PREV_RELEASE_TAG=$prevReleaseTag" >> $GITHUB_OUTPUT
+
+          echo $commitHash
+          git log --oneline -10
+
+      - name: Generate changelog
+        id: changelog
+        if: fromJSON(env.IS_ANDROID) || fromJSON(env.IS_IOS)
+        uses: metcalfc/changelog-generator@v4.3.1
+        continue-on-error: true
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
+          head-ref: ${{ steps.env-setup.outputs.COMMIT_HASH }}
+          base-ref: ${{ steps.env-setup.outputs.PREV_RELEASE_TAG }}
+          fetch: false
+
+      - name: Convert changelog for slack mrkdwn
+        id: changelogMrkdwn
+        if: fromJSON(env.IS_ANDROID) || fromJSON(env.IS_IOS)
+        uses: LoveToKnow/slackify-markdown-action@v1.1.1
+        with:
+          text: ${{ steps.changelog.outputs.changelog }}
+
+      - name: Publish slack status
+        id: slack-info
+        if: fromJSON(env.IS_ANDROID) || fromJSON(env.IS_IOS)
+        env:
+          CHANGELOG: ${{ steps.changelogMrkdwn.outputs.text }}
+          APP_ICON: ${{ fromJSON(env.IS_PROD) && ':store-bird:' || fromJSON(env.IS_INTERNAL) && ':internal-bird:' || ':experimental-bird:' }}
+        run: |
+
+          # BUILD STATUS:
+          # -2 - cancelled
+          # -1 - failed
+          #  0 - pending
+          #  1 - running
+          #  2 - success
+          #  * - skipped
+
+          ios=${{ fromJSON(env.IS_IOS) && 1 || -3}}
+          if [[ ${{ env.IS_ANDROID_ALL }} == 'true' ]]; then
+            apk=1
+            aab=0
+            apk_sv=0
+          else
+            apk=${{ fromJSON(env.IS_ANDROID_APK) && 1 || -3}}
+            aab=${{ fromJSON(env.IS_ANDROID_AAB) && 1 || -3}}
+            apk_sv=${{ fromJSON(env.IS_ANDROID_APK_SV) && 1 || -3}}
+          fi
+
+          branch="${GITHUB_REF#refs/heads/}"
+          version="${{ steps.env-setup.outputs.APP_VERSION }}-${{ steps.env-setup.outputs.BUILD_NUMBER }}"
+          is_sentry=${{ fromJSON(inputs.isDebugRelease) && 1 || 0 }}
+          git_link="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [[ ${{ inputs.isScheduledBuild }} == 'true' ]]; then
+            APP_ICON=":clock10:$APP_ICON"
+          fi
+
+          source scripts/slack/status_create.sh "channel_id=$SLACK_CHANNEL_ID" "token=$SLACK_TOKEN" "apk=$apk" "apk_sv=$apk_sv" "aab=$aab" "ios=$ios" "version=$version" "branch=$branch" "changelog=$CHANGELOG" is_sentry=$is_sentry "git_link=$git_link" "app_icon=$APP_ICON"
+
+          echo "SLACK_THREAD_TS=$ts" >> $GITHUB_OUTPUT
+
+  buildAndroid:
+    name: Setup Android env & build
+    needs: prebuild
+    if: fromJson(needs.prebuild.outputs.IS_ANDROID)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: write
+      packages: read
+    env:
+      SLACK_THREAD_TS: ${{ needs.prebuild.outputs.SLACK_THREAD_TS }}
+      CMAKE_PATH: /usr/local
+      PATH_ARTIFACT_APK: androidReleases/${{ inputs.buildFlavour }}-${{ needs.prebuild.outputs.BUILD_NUMBER }}.apk
+      PATH_ARTIFACT_AAB: androidReleases/${{ inputs.buildFlavour }}-${{ needs.prebuild.outputs.BUILD_NUMBER }}.aab
+      PATH_ARTIFACT_APK_SV: androidReleases/${{ inputs.buildFlavour }}-${{ needs.prebuild.outputs.BUILD_NUMBER }}-SV.apk
+
+    steps:
+      - name: Clean previous cache
+        run: |
+          df -h
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          df -h
+
+      - name: Check out Git repository 📦
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ needs.prebuild.outputs.COMMIT_HASH }}
+
+      - name: Set up Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@holepunchto'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Git config
+        run: |
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'bot@github.actions.com'
+
+      - name: Install CMake 3.30.5
+        run: |
+          wget https://cmake.org/files/v3.30/cmake-3.30.5-linux-x86_64.sh
+          # install it under /usr/local
+          sudo /bin/sh ./cmake-3.30.5-linux-x86_64.sh --skip-licence --prefix=$CMAKE_PATH --exclude-subdir
+
+      - name: Install Ninja
+        continue-on-error: true
+        run: |
+          sudo apt-get update && sudo apt-get install -y ninja-build
+          which ninja
+
+      - name: Configure CMake
+        run: |
+          cmake --version
+
+          echo "cmake.dir=$CMAKE_PATH" > ./android/local.properties
+          $CMAKE_PATH/bin/cmake --version
+
+          cat ./android/local.properties
+
+      - name: Set up JDK 11 ☕
+        if: steps.cache-jdk.outputs.cache-hit != 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+          check-latest: false
+
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v3
+
+      - name: Set Android credentials gradle.properties
+        env:
+          KEY_STORE: ${{ secrets.KEET_MOBILE_KEY_STORE }}
+          STORE_PASSWORD: ${{ secrets.KEET_MOBILE_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEET_MOBILE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEET_MOBILE_KEY_PASSWORD }}
+        run: |
+          KEET_UPLOAD_STORE_FILE='keet.keystore'
+
+          echo "KEET_UPLOAD_STORE_FILE=$KEET_UPLOAD_STORE_FILE" >> ./android/gradle.properties
+          echo "KEET_UPLOAD_STORE_PASSWORD=$STORE_PASSWORD" >> ./android/gradle.properties
+          echo "KEET_UPLOAD_KEY_ALIAS=$KEY_ALIAS" >> ./android/gradle.properties
+          echo "KEET_UPLOAD_KEY_PASSWORD=$KEY_PASSWORD" >> ./android/gradle.properties
+
+          base64 --decode <<< "$KEY_STORE" > ./android/app/keet.keystore
+          chmod 777 ./android/app/keet.keystore
+          chmod 777 ./android/gradle.properties
+
+          mkdir androidReleases
+
+      - name: Cache drives
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-drives
+          path: '~/.drives'
+
+      - name: Configure Sentry
+        if: fromJSON(inputs.isDebugRelease)
+        env:
+          SENTRY_TOKEN: ${{ secrets.SENTRY_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: ${{ secrets.SENTRY_URL }}
+        run: |
+          echo "auth.token=$SENTRY_TOKEN" >> android/sentry.properties
+          echo "defaults.org=$SENTRY_ORG" >> android/sentry.properties
+          echo "defaults.project=$SENTRY_PROJECT" >> android/sentry.properties
+          echo "defaults.url=$SENTRY_URL" >> android/sentry.properties
+
+          git apply ./scripts/with_sentry.patch
+
+      - name: Install dependencies
+        run: npm install
+        timeout-minutes: 40
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Execute Android Apk build
+        if: ${{ !cancelled() && fromJSON(env.IS_ANDROID_APK) }}
+        id: apk-build
+        env:
+          BUILD_SCHEME: ${{ fromJSON(env.IS_PROD) && 'assembleStoreRelease' || fromJSON(env.IS_INTERNAL) && 'assembleInternalRelease' || 'assembleExperimentalRelease' }}
+          PATH_OUTPUT_APK: android/app/build/outputs/apk/${{ inputs.buildFlavour }}/release
+          OUTPUT_APK_NAME: app-${{ inputs.buildFlavour }}-arm64-v8a-release.apk
+        run: |
+          df -h
+          echo "Apk Build Scheme: $BUILD_SCHEME"
+          (cd android && ./gradlew $BUILD_SCHEME -PreactNativeArchitectures=arm64-v8a)
+
+          echo "Apk Build Folder: $PATH_OUTPUT_APK"
+          ls $PATH_OUTPUT_APK
+          mv "$PATH_OUTPUT_APK/$OUTPUT_APK_NAME" $PATH_ARTIFACT_APK
+
+          echo "Android Builds To save: "
+          ls "androidReleases"
+
+      - name: Handle Apk Build Status
+        if: ${{ !cancelled() && steps.apk-build.conclusion != 'skipped' }}
+        run: source scripts/slack/status_resync.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS" file_path="$PATH_ARTIFACT_APK" current_runner="apk" next_runner="${{ fromJSON(env.IS_ANDROID_AAB) && 'aab' || '' }}" runner_status="${{ steps.apk-build.conclusion }}"
+
+      - name: Execute Android Aab build
+        if: ${{ !cancelled() && fromJSON(env.IS_ANDROID_AAB) }}
+        id: aab-build
+        run: |
+          df -h
+          (cd android && ./gradlew bundleStoreRelease)
+          echo "Aab Build Output: "
+          ls "android/app/build/outputs/bundle/storeRelease"
+          mv "android/app/build/outputs/bundle/storeRelease/app-store-release.aab" $PATH_ARTIFACT_AAB
+
+          echo "Android Builds To save: "
+          ls "androidReleases"
+
+      - name: Handle Aab Build Status
+        if: ${{ !cancelled() && steps.aab-build.conclusion != 'skipped' }}
+        run: source scripts/slack/status_resync.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS" file_path="$PATH_ARTIFACT_AAB" current_runner="aab" next_runner="${{ fromJSON(env.IS_ANDROID_APK_SV) && 'apk_sv' || '' }}" runner_status="${{ steps.aab-build.conclusion }}"
+
+      - name: Execute Android SV Apk build
+        if: ${{ !cancelled() && fromJSON(env.IS_ANDROID_APK_SV) }}
+        id: apk-sv-build
+        run: |
+          df -h
+          bash scripts/setup-sv.sh
+
+          (cd android && ./gradlew assembleSvRelease)
+          echo "Apk SV Build Output: "
+          ls "android/app/build/outputs/apk/sv/release"
+          mv "android/app/build/outputs/apk/sv/release/app-sv-arm64-v8a-release.apk" $PATH_ARTIFACT_APK_SV
+
+          echo "Android Builds To save: "
+          ls "androidReleases"
+
+      - name: Handle Apk SV Build Status
+        if: ${{ !cancelled() && steps.apk-sv-build.conclusion != 'skipped' }}
+        run: source scripts/slack/status_resync.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS" file_path="$PATH_ARTIFACT_APK_SV" current_runner="apk_sv" next_runner="" runner_status="${{ steps.apk-sv-build.conclusion }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-releases
+          path: androidReleases/
+          retention-days: 1
+
+      - name: Handle cancelled slack status
+        if: cancelled()
+        run: source scripts/slack/status_resync_cancelled.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS"
+
+  buildIOS:
+    name: Setup IOS env & build
+    runs-on: macos-14
+    needs: prebuild
+    if: fromJson(needs.prebuild.outputs.IS_IOS)
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      packages: read
+    env:
+      SLACK_THREAD_TS: ${{ needs.prebuild.outputs.SLACK_THREAD_TS }}
+      PATH_ARTIFACT_IPA: iosReleases/${{ inputs.buildFlavour }}-${{ needs.prebuild.outputs.BUILD_NUMBER }}.ipa
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ needs.prebuild.outputs.COMMIT_HASH }}
+
+      - name: Set up Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@holepunchto'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Git config
+        run: |
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'bot@github.actions.com'
+
+      - name: Cache drives
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-drives
+          path: '~/.drives'
+
+      - name: Configure Sentry
+        if: fromJSON(inputs.isDebugRelease)
+        env:
+          SENTRY_TOKEN: ${{ secrets.SENTRY_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: ${{ secrets.SENTRY_URL }}
+        run: |
+          echo "auth.token=$SENTRY_TOKEN" >> ios/sentry.properties
+          echo "defaults.org=$SENTRY_ORG" >> ios/sentry.properties
+          echo "defaults.project=$SENTRY_PROJECT" >> ios/sentry.properties
+          echo "defaults.url=$SENTRY_URL" >> ios/sentry.properties
+
+          git apply ./scripts/with_sentry.patch
+
+      - name: Install dependencies
+        run: npm install
+        timeout-minutes: 40
+        # run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Select Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_15.2.app/Contents/Developer'
+
+      - name: Install the Apple certificate and provisioning profile
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+          KEET_PP: ${{ fromJSON(env.IS_PROD) && secrets.KEET_PP || fromJSON(env.IS_INTERNAL) && secrets.KEET_YELLOW_PP || secrets.KEET_GREEN_PP }}
+          GATE_KEET_PP: ${{ fromJSON(env.IS_PROD) && secrets.GATE_PP || fromJSON(env.IS_INTERNAL) && secrets.GATE_YELLOW_PP || secrets.GATE_GREEN_PP }}
+          RECEIVE_CONTENT_PP: ${{ fromJSON(env.IS_PROD) && secrets.RECEIVE_CONTENT_PP || fromJSON(env.IS_INTERNAL) && secrets.RECEIVE_CONTENT_YELLOW_PP || secrets.RECEIVE_CONTENT_GREEN_PP }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          # apply release patch
+          echo "apply release patch"
+          git apply ./scripts/ios_release.patch
+
+          # create variables
+          echo "create variables"
+          CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
+          KEET_PP_PATH=$RUNNER_TEMP/keet.mobileprovision
+          GATE_KEET_PP_PATH=$RUNNER_TEMP/gate-keeper.mobileprovision
+          RECEIVE_CONTENT_PP_PATH=$RUNNER_TEMP/keet-receive-content.mobileprovision
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+
+          # import certificate and provisioning profile from secrets
+          echo "import certificate and provisioning profile from secrets"
+          echo -n "$BUILD_CERTIFICATE_BASE64" | base64 --decode -o $CERTIFICATE_PATH
+          echo -n "$KEET_PP" | base64 --decode -o $KEET_PP_PATH
+          echo -n "$GATE_KEET_PP" | base64 --decode -o $GATE_KEET_PP_PATH
+          echo -n "$RECEIVE_CONTENT_PP" | base64 --decode -o $RECEIVE_CONTENT_PP_PATH
+
+          # create temporary keychain
+          echo "create temporary keychain"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+          security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+
+          # import certificate to keychain
+          echo "import certificate to keychain"
+
+          security import $CERTIFICATE_PATH -P "$P12_PASSWORD" -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          security list-keychain -d user -s $KEYCHAIN_PATH
+
+          # apply provisioning profile
+          echo "apply provisioning profile"
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp $KEET_PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+          cp $GATE_KEET_PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+          cp $RECEIVE_CONTENT_PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+
+          # echo some output
+          security find-identity -v -p codesigning
+          ls -l ~/Library/MobileDevice/Provisioning\ Profiles
+
+          mkdir iosReleases
+
+      - name: Install Pods
+        run: NO_FLIPPER=1 npx pod-install
+
+      - name: build archive
+        id: ios-build
+        env:
+          BUILD_SCHEME: ${{ fromJSON(env.IS_PROD) && 'Keet' || fromJSON(env.IS_INTERNAL) && 'Keet-internal' || 'Keet-experimental' }}
+        run: |
+          xcodebuild -version
+          xcodebuild -scheme "${{env.BUILD_SCHEME}}" \
+          -workspace  ./ios/Keet.xcworkspace \
+          -archivePath $RUNNER_TEMP/Keet.xcarchive \
+          -sdk iphoneos \
+          -configuration Release \
+          -destination generic/platform=iOS \
+          archive
+
+      - name: export ipa
+        id: ios-export
+        env:
+          EXPORT_OPTIONS_PLIST: ${{ fromJSON(env.IS_PROD) && secrets.EXPORT_OPTIONS_PLIST || fromJSON(env.IS_INTERNAL) && secrets.EXPORT_OPTIONS_PLIST_YELLOW || secrets.EXPORT_OPTIONS_PLIST_GREEN }}
+        run: |
+          EXPORT_OPTS_PATH=$RUNNER_TEMP/ExportOptions.plist
+          echo -n "$EXPORT_OPTIONS_PLIST" | base64 --decode -o $EXPORT_OPTS_PATH
+          xcodebuild -exportArchive -archivePath $RUNNER_TEMP/Keet.xcarchive -exportOptionsPlist $EXPORT_OPTS_PATH -exportPath $RUNNER_TEMP/build
+          ls -l $RUNNER_TEMP/build
+          cp "$RUNNER_TEMP/build/Keet.ipa" $PATH_ARTIFACT_IPA
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ios-releases
+          path: iosReleases/
+          retention-days: 1
+
+      - name: Upload to TestFlight
+        id: ios-upload
+        env:
+          API_KEY_BASE64: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+        run: |
+          mkdir -p ./private_keys
+          echo -n "$API_KEY_BASE64" | base64 --decode -o "./private_keys/AuthKey_${{ secrets.APPSTORE_API_KEY_ID }}.p8"
+          xcrun altool --validate-app -f "$RUNNER_TEMP/build/Keet.ipa" -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}
+          xcrun altool --upload-app -f "$RUNNER_TEMP/build/Keet.ipa" -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}
+
+      - name: Handle IOS Build Status
+        if: ${{ !cancelled() }}
+        run: source scripts/slack/status_resync.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS" file_path="$PATH_ARTIFACT_IPA" current_runner="ios" runner_status="${{ job.status }}"
+
+      - name: Clean up keychain and provisioning profiles
+        if: always()
+        run: |
+          security delete-keychain $RUNNER_TEMP/app-signing.keychain-db
+          rm ~/Library/MobileDevice/Provisioning\ Profiles/keet.mobileprovision
+          rm ~/Library/MobileDevice/Provisioning\ Profiles/gate-keeper.mobileprovision
+          rm ~/Library/MobileDevice/Provisioning\ Profiles/keet-receive-content.mobileprovision
+
+      - name: Handle cancelled slack status
+        if: cancelled()
+        run: source scripts/slack/status_resync_cancelled.sh token="$SLACK_TOKEN" channel_id="$SLACK_CHANNEL_ID" ts="$SLACK_THREAD_TS"
+
+  publishRelease:
+    name: Create Github Release & Slack Notification
+    runs-on: ubuntu-24.04
+    needs: [prebuild, buildAndroid, buildIOS]
+    timeout-minutes: 2
+    if: ${{ !cancelled() && (needs.buildAndroid.result == 'success' || needs.buildIOS.result == 'success') }}
+    permissions:
+      contents: write
+      packages: read
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ needs.prebuild.outputs.COMMIT_HASH }}
+
+      - uses: actions/download-artifact@v4
+        if: fromJSON(env.IS_ANDROID)
+        continue-on-error: true
+        with:
+          name: android-releases
+          path: androidReleases/
+
+      - uses: actions/download-artifact@v4
+        if: fromJSON(env.IS_IOS)
+        continue-on-error: true
+        with:
+          name: ios-releases
+          path: iosReleases/
+
+      - name: Build Details Message
+        id: git_release_body
+        run: |
+          info="
+          Builds:
+            Android: apk ${{ fromJSON(env.IS_ANDROID_APK) && '✔︎' || '∅' }} | SV ${{ fromJSON(env.IS_ANDROID_APK_SV) && '✔︎' || '∅' }} | aab ${{ fromJSON(env.IS_ANDROID_AAB) && '✔︎' || '∅' }}
+            IOS: Testflight ${{ fromJSON(env.IS_IOS) && '✔︎' || '∅' }}
+
+          Branch: ${GITHUB_REF##*/}"
+
+          echo "message<<EOF" >> $GITHUB_OUTPUT
+          echo "$info" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Publish Github Release
+        uses: ncipollo/release-action@v1
+        continue-on-error: true
+        with:
+          artifacts: 'androidReleases/*,iosReleases/*'
+          body: ${{ steps.git_release_body.outputs.message }}
+          tag: ${{ needs.prebuild.outputs.APP_VERSION }}-${{ needs.prebuild.outputs.BUILD_NUMBER }}
+          generateReleaseNotes: true
+
+      - name: Drop Github Artifacts
+        uses: geekyeggo/delete-artifact@v5
+        if: always()
+        with:
+          name: |
+            android-releases
+            ios-releases
+          failOnError: false

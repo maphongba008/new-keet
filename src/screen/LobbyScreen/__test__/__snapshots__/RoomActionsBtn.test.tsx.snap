@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoomListFilter render correctly 1`] = `
+<View
+  onLayout={[Function]}
+>
+  <View
+    accessibilityHint="Create Room"
+    accessibilityLabel="lobby_btn_add_room"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "opacity": 1,
+        },
+        undefined,
+      ]
+    }
+    testID="lobby_btn_add_room"
+  >
+    <BVLinearGradient
+      colors={
+        [
+          855703503,
+          860530431,
+        ]
+      }
+      endPoint={
+        {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 8,
+          "height": 40,
+          "justifyContent": "center",
+          "width": 40,
+        }
+      }
+    >
+      <RNCMaskedView>
+        <View
+          pointerEvents="none"
+          style={
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={18}
+            bbWidth={18}
+            color="#95E6CB"
+            fill="#95E6CB"
+            focusable={false}
+            height={18}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {},
+                {
+                  "flex": 0,
+                  "height": 18,
+                  "width": 18,
+                },
+              ]
+            }
+            testID="svg-icon-plus"
+            tintColor="#95E6CB"
+            vbHeight={24}
+            vbWidth={24}
+            width={18}
+            xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.813 12a.56.56 0 0 1-.563.563h-7.687v7.687a.562.562 0 1 1-1.126 0v-7.687H3.75a.563.563 0 0 1 0-1.126h7.688V3.75a.563.563 0 0 1 1.124 0v7.688h7.688a.56.56 0 0 1 .563.562" fill="#fff"/></svg>
+"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4288014027,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M20.813 12a.56.56 0 0 1-.563.563h-7.687v7.687a.562.562 0 1 1-1.126 0v-7.687H3.75a.563.563 0 0 1 0-1.126h7.688V3.75a.563.563 0 0 1 1.124 0v7.688h7.688a.56.56 0 0 1 .563.562"
+                fill={
+                  {
+                    "payload": 4294967295,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={18}
+          bbWidth={18}
+          color="#95E6CB"
+          fill="#95E6CB"
+          focusable={false}
+          height={18}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {},
+              {
+                "flex": 0,
+                "height": 18,
+                "width": 18,
+              },
+            ]
+          }
+          testID="svg-icon-plus"
+          tintColor="#95E6CB"
+          vbHeight={24}
+          vbWidth={24}
+          width={18}
+          xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.813 12a.56.56 0 0 1-.563.563h-7.687v7.687a.562.562 0 1 1-1.126 0v-7.687H3.75a.563.563 0 0 1 0-1.126h7.688V3.75a.563.563 0 0 1 1.124 0v7.688h7.688a.56.56 0 0 1 .563.562" fill="#fff"/></svg>
+"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4288014027,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              d="M20.813 12a.56.56 0 0 1-.563.563h-7.687v7.687a.562.562 0 1 1-1.126 0v-7.687H3.75a.563.563 0 0 1 0-1.126h7.688V3.75a.563.563 0 0 1 1.124 0v7.688h7.688a.56.56 0 0 1 .563.562"
+              fill={
+                {
+                  "payload": 4294967295,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <BVLinearGradient
+          colors={
+            [
+              4278255567,
+              4283082495,
+            ]
+          }
+          endPoint={
+            {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={null}
+          startPoint={
+            {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            {
+              "flex": 1,
+              "height": "100%",
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+      </RNCMaskedView>
+    </BVLinearGradient>
+  </View>
+</View>
+`;

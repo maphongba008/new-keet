@@ -1,0 +1,77 @@
+[
+  {
+    "key": "recent",
+    "message": "recentlyUsed",
+    "emoji": "🕛",
+    "data": []
+  },
+  {
+    "key": "keet-emoji",
+    "message": "keetEmoji",
+    "emoji": "🍐",
+    "data": []
+  },
+  {
+    "key": "smileys-emotion",
+    "message": "smileyEmotion",
+    "emoji": "🤪",
+    "group": 0,
+    "data": []
+  },
+  {
+    "key": "people-body",
+    "message": "peopleBody",
+    "emoji": "💁‍♀",
+    "group": 1,
+    "data": []
+  },
+  {
+    "key": "animals-nature",
+    "message": "animalsNature",
+    "emoji": "🦄",
+    "group": 3,
+    "data": []
+  },
+  {
+    "key": "food-drink",
+    "message": "foodDrink",
+    "emoji": "🍔",
+    "group": 4,
+    "data": []
+  },
+  {
+    "key": "travel-places",
+    "message": "travelPlaces",
+    "emoji": "✈️",
+    "group": 5,
+    "data": []
+  },
+  {
+    "key": "activities",
+    "message": "activities",
+    "emoji": "⚾️",
+    "group": 6,
+    "data": []
+  },
+  {
+    "key": "objects",
+    "message": "objects",
+    "emoji": "💡",
+    "group": 7,
+    "data": []
+  },
+  {
+    "key": "symbols",
+    "message": "symbols",
+    "emoji": "⁉",
+    "group": 8,
+    "data": []
+  },
+  {
+    "key": "flags",
+    "message": "flags",
+    "emoji": "🏳️‍🌈",
+    "group": 9,
+    "data": []
+  }
+]

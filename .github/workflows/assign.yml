@@ -1,0 +1,73 @@
+name: 👀 Reviewer and Assignee Assignment
+
+on:
+  pull_request_target:
+    types: [opened, reopened, title]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  assign_assignee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: toshimaru/auto-author-assign@v2.1.1
+
+  assign_reviewers:
+    runs-on: ubuntu-latest
+    needs: assign_assignee
+    steps:
+      - name: Assign Reviewers Based on PR Title
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const DEFAULT_REVIEWERS = ['AmreshVs', 'gasolin'];
+            const prTitle = context.payload.pull_request.title;
+            // Get current assignee
+            const prCreator = context.payload.pull_request.user.login;
+
+            // Define title patterns and corresponding reviewers
+            const titleReviewers = {
+              '^\\[SYSTEM\\].*': ['AmreshVs', 'gasolin', 'hinodi', 'maphongba008', 'xTMNTxRaphaelx'],
+              '^\\[ROOM\\].*': ['OzymandiasTheGreat', 'okoroeugene', 'maphongba008'],
+              '^\\[CHAT\\].*': ['ARIPRASATH4664', 'DimitrisTzimikas', 'OzymandiasTheGreat', 'roti-c137'],
+              '^\\[MEDIA\\].*': ['chocky335', 'okoroeugene', 'xTMNTxRaphaelx'],
+              '^\\[CI\\].*': ['chocky335', 'gasolin', 'maphongba008'],
+              '^\\[CALL\\].*': ['AmreshVs', 'hinodi'],
+              '^\\[WALLET\\].*': ['okoroeugene', 'xTMNTxRaphaelx'],
+            };
+
+            // Find matching reviewers based on PR title
+            let reviewers = DEFAULT_REVIEWERS;
+            for (const regexStr in titleReviewers) {
+              const regex = new RegExp(regexStr, 'i');
+              if (regex.test(prTitle)) {
+                reviewers = titleReviewers[regexStr];
+                break;
+              }
+            }
+
+            // Exclude the PR creator from the reviewers list
+            reviewers = reviewers
+              .filter(reviewer => reviewer !== prCreator) // Remove PR creator
+              .filter(reviewer => reviewer.trim().length > 0)  // Remove empty strings
+
+            if (reviewers.length === 0) {
+                console.log('No eligible reviewers found for the PR title.');
+                return;
+            }
+
+            // Assign reviewers
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                reviewers: reviewers
+              });
+              console.log(`Successfully assigned reviewers: ${reviewers.join(', ')}`);
+            } catch (error) {
+              console.error('Error in reviewer assignment:', error);
+              core.setFailed(`Failed to assign reviewers: ${error.message}`);
+            }

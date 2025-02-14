@@ -1,0 +1,30 @@
+{
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "ios": {
+    "modules": [
+      "KeetCoreModule",
+      "KeetPushModule",
+      "KeetReceiveContentModule",
+      "KeetWaveformModule",
+      "KeetVideoThumbnailModule",
+      "KeetVideoUtilsModule"
+    ],
+    "appDelegateSubscribers": [
+      "KeetPushDelegateSubscriber"
+    ]
+  },
+  "android": {
+    "modules": [
+      "io.keet.KeetCoreModule",
+      "io.keet.KeetDownloadsModule",
+      "io.keet.KeetPushModule",
+      "io.keet.KeetReceiveContentModule",
+      "io.keet.KeetWaveformModule",
+      "io.keet.KeetVideoThumbnailModule",
+      "io.keet.KeetVideoUtilsModule"
+    ]
+  }
+}

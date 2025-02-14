@@ -1,0 +1,13 @@
+diff --git a/ios/Keet.xcodeproj/xcshareddata/xcschemes/Keet.xcscheme b/ios/Keet.xcodeproj/xcshareddata/xcschemes/Keet.xcscheme
+index 89f4ef1d..5a086e63 100644
+--- a/ios/Keet.xcodeproj/xcshareddata/xcschemes/Keet.xcscheme
++++ b/ios/Keet.xcodeproj/xcshareddata/xcschemes/Keet.xcscheme
+@@ -41,7 +41,7 @@
+       </Testables>
+    </TestAction>
+    <LaunchAction
+-      buildConfiguration = "Debug"
++      buildConfiguration = "Release"
+       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+       enableASanStackUseAfterReturn = "YES"

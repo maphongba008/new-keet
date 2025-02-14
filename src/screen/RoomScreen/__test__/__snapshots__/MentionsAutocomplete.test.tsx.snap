@@ -1,0 +1,498 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test MentionsAutocomplete For Dm room render without member role color and tag 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#1A1D29",
+        "borderColor": "#323A4C",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "left": 8,
+        "maxHeight": 200,
+        "overflow": "hidden",
+        "position": "absolute",
+        "width": "100%",
+      },
+      {
+        "bottom": 4,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    collapsable={false}
+    contentContainerStyle={
+      {
+        "padding": 8,
+      }
+    }
+    data={
+      [
+        {
+          "avatarUrl": null,
+          "displayName": "Member 1",
+          "memberId": "1",
+          "name": "member 1",
+        },
+        {
+          "avatarUrl": "base64",
+          "displayName": "Member 2",
+          "memberId": "2",
+          "name": "member 2",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    handlerTag={2}
+    handlerType="NativeViewGestureHandler"
+    keyExtractor={[Function]}
+    keyboardShouldPersistTaps="always"
+    nestedScrollEnabled={true}
+    onContentSizeChange={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+    waitFor={
+      [
+        {
+          "current": null,
+        },
+        {
+          "current": null,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="1"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          pointerEvents="box-only"
+          style={
+            [
+              {
+                "height": 30,
+              },
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+          testID="1"
+        >
+          <View
+            accessibilityLabel="avatar_image"
+            accessible={true}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "hsla(49,70%,70%,0.9)",
+                "borderRadius": 15,
+                "height": 30,
+                "justifyContent": "center",
+                "width": 30,
+              }
+            }
+            testID="avatar_image"
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#ffffff",
+                    "fontFamily": "OpenSans-Bold",
+                    "fontSize": 12,
+                    "includeFontPadding": false,
+                  },
+                  {
+                    "fontSize": 12,
+                  },
+                ]
+              }
+            >
+              M
+            </Text>
+          </View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 16,
+                  "includeFontPadding": false,
+                  "paddingLeft": 8,
+                },
+                {},
+              ]
+            }
+          >
+            Member 1
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "marginTop": 4,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="2"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          pointerEvents="box-only"
+          style={
+            [
+              {
+                "height": 30,
+              },
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+          testID="2"
+        >
+          <Image
+            accessibilityLabel="avatar_image"
+            accessible={true}
+            cachePolicy="memory"
+            contentFit="contain"
+            recyclingKey="base64"
+            source={
+              {
+                "uri": "base64",
+              }
+            }
+            style={
+              {
+                "borderRadius": 15,
+                "height": 30,
+                "width": 30,
+              }
+            }
+            testID="avatar_image"
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 16,
+                  "includeFontPadding": false,
+                  "paddingLeft": 8,
+                },
+                {},
+              ]
+            }
+          >
+            Member 2
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`test MentionsAutocomplete render correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#1A1D29",
+        "borderColor": "#323A4C",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "left": 8,
+        "maxHeight": 200,
+        "overflow": "hidden",
+        "position": "absolute",
+        "width": "100%",
+      },
+      {
+        "bottom": 4,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    collapsable={false}
+    contentContainerStyle={
+      {
+        "padding": 8,
+      }
+    }
+    data={
+      [
+        {
+          "avatarUrl": "base64",
+          "capabilities": 31,
+          "displayName": "Member 2",
+          "memberId": "2",
+          "name": "member 2",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={[Function]}
+    handlerTag={1}
+    handlerType="NativeViewGestureHandler"
+    keyExtractor={[Function]}
+    keyboardShouldPersistTaps="always"
+    nestedScrollEnabled={true}
+    onContentSizeChange={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+    waitFor={
+      [
+        {
+          "current": null,
+        },
+        {
+          "current": null,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="2"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          pointerEvents="box-only"
+          style={
+            [
+              {
+                "height": 30,
+              },
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+          testID="2"
+        >
+          <Image
+            accessibilityLabel="avatar_image"
+            accessible={true}
+            cachePolicy="memory"
+            contentFit="contain"
+            recyclingKey="base64"
+            source={
+              {
+                "uri": "base64",
+              }
+            }
+            style={
+              {
+                "borderRadius": 15,
+                "height": 30,
+                "width": 30,
+              }
+            }
+            testID="avatar_image"
+          />
+          <Text
+            style={
+              [
+                {
+                  "color": "#ffffff",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 16,
+                  "includeFontPadding": false,
+                  "paddingLeft": 8,
+                },
+                {
+                  "color": "#53EA98",
+                },
+              ]
+            }
+          >
+            Member 2
+          </Text>
+          <View
+            style={
+              [
+                {
+                  "marginLeft": 4,
+                },
+                [
+                  {
+                    "alignItems": "center",
+                    "borderRadius": 6,
+                    "justifyContent": "center",
+                    "minHeight": 16,
+                    "minWidth": 32,
+                  },
+                  {
+                    "backgroundColor": "rgba(83, 234, 152, 0.2)",
+                  },
+                ],
+              ]
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                [
+                  {
+                    "color": "#ffffff",
+                    "fontFamily": "OpenSans-SemiBold",
+                    "fontSize": 12,
+                    "includeFontPadding": false,
+                    "lineHeight": 17,
+                    "paddingHorizontal": 4,
+                    "textAlignVertical": "center",
+                  },
+                  {
+                    "color": "#53EA98",
+                  },
+                  {
+                    "fontSize": 10,
+                    "lineHeight": 15,
+                  },
+                ]
+              }
+            >
+              Admin
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`test MentionsAutocomplete render null with no profiles 1`] = `null`;

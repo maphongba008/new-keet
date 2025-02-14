@@ -1,0 +1,108 @@
+import Config from 'react-native-config'
+
+const PRODUCT = {
+  // define flags in alphabetical order
+  FORCE_UPGRADE_BANNER: true,
+  GRADIENT_TAB_BAR_ICON: true,
+  IS_CHAT_CACHE_ENABLED: true,
+  IS_SENTRY_ENABLED: false,
+  IS_TIME_STATS_ENABLED: true,
+  SHOW_ADMIN_RESET_UI: false,
+  SHOW_BROADCAST_FILTER: false,
+  SHOW_CHANNEL_UI: true,
+  SHOW_CLEAN_DEVICE_SCREEN: false,
+  SHOW_FULLSCREEN_AD: false,
+  SHOW_MESSAGE_COPY_LINK: false,
+  SHOW_NEW_PROFILE_FEATURE: false,
+  SHOW_REMOVE_DEVICE: false,
+  SHOW_RENAME_DEVICE: false,
+  SHOW_PARTICIPANT_SHEET_USER_NAME: false,
+  SHOW_PASSCODE: false,
+  SHOW_PUSH_NOTIFICATION_OPTION: false,
+  SHOW_ROOM_FILTER: false,
+  SHOW_UPDATE_BANNER: true,
+  SHOW_WALLET: false,
+  TRANSPARENT_TAB_BAR: true,
+}
+
+// KEEP this eslint statement or will raise lint error when swith to other setup
+const STAGING = {
+  ...PRODUCT,
+  // define flags in alphabetical order
+  IS_CHAT_CACHE_ENABLED: true,
+  IS_SENTRY_ENABLED: false,
+  SHOW_BROADCAST_FILTER: false,
+  SHOW_CHANNEL_UI: true,
+  SHOW_CLEAN_DEVICE_SCREEN: true,
+  SHOW_MESSAGE_COPY_LINK: true,
+  SHOW_NEW_PROFILE_FEATURE: true,
+  SHOW_PARTICIPANT_SHEET_USER_NAME: false,
+  SHOW_PASSCODE: true,
+  SHOW_PUSH_NOTIFICATION_OPTION: false,
+  SHOW_ROOM_FILTER: true,
+  SHOW_WALLET: true,
+  SHOW_ADMIN_RESET_UI: true,
+  SHOW_REMOVE_DEVICE: true,
+  SHOW_RENAME_DEVICE: true,
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SV = {
+  ...PRODUCT,
+  // define flags in alphabetical order
+  GRADIENT_TAB_BAR_ICON: false,
+  SHOW_PARTICIPANT_SHEET_USER_NAME: false,
+  SHOW_PUSH_NOTIFICATION_OPTION: false,
+  SHOW_ROOM_FILTER: true,
+  SHOW_UPDATE_BANNER: false,
+  TRANSPARENT_TAB_BAR: false,
+  IS_CHAT_CACHE_ENABLED: true,
+}
+
+// Specify a feature set alphabetically
+const APP = STAGING
+
+export const FORCE_UPGRADE_BANNER = APP?.FORCE_UPGRADE_BANNER
+
+export const GRADIENT_TAB_BAR_ICON = APP?.GRADIENT_TAB_BAR_ICON
+
+export const IS_SENTRY_ENABLED = APP?.IS_SENTRY_ENABLED
+
+export const SHOW_BROADCAST_FILTER = APP?.SHOW_BROADCAST_FILTER
+
+export const SHOW_CHANNEL_UI = APP?.SHOW_CHANNEL_UI
+
+export const SHOW_CLEAN_DEVICE_SCREEN = APP?.SHOW_CLEAN_DEVICE_SCREEN
+
+export const SHOW_FULLSCREEN_AD = APP?.SHOW_FULLSCREEN_AD
+
+export const SHOW_MESSAGE_COPY_LINK = APP?.SHOW_MESSAGE_COPY_LINK
+
+export const SHOW_NEW_PROFILE_FEATURE = APP?.SHOW_NEW_PROFILE_FEATURE
+
+export const SHOW_PARTICIPANT_SHEET_USER_NAME =
+  APP?.SHOW_PARTICIPANT_SHEET_USER_NAME
+
+export const SHOW_PASSCODE = APP?.SHOW_PASSCODE
+
+export const SHOW_PUSH_NOTIFICATION_OPTION = APP?.SHOW_PUSH_NOTIFICATION_OPTION
+
+export const SHOW_ROOM_FILTER = APP?.SHOW_ROOM_FILTER
+
+export const SHOW_UPDATE_BANNER = APP?.SHOW_UPDATE_BANNER
+
+export const SHOW_WALLET = APP?.SHOW_WALLET
+
+export const TRANSPARENT_TAB_BAR = APP?.TRANSPARENT_TAB_BAR
+
+export const IS_EXPERIMENTAL_BUILD = Config?.KEET_VARIANT === 'experimental'
+
+export const IS_CHAT_CACHE_ENABLED = APP?.IS_CHAT_CACHE_ENABLED
+
+export const IS_TIME_STATS_ENABLED = APP?.IS_TIME_STATS_ENABLED
+
+export const SHOW_ADMIN_RESET_UI = APP?.SHOW_ADMIN_RESET_UI
+
+export const SHOW_REMOVE_DEVICE = APP?.SHOW_REMOVE_DEVICE
+
+export const SHOW_RENAME_DEVICE = APP?.SHOW_RENAME_DEVICE

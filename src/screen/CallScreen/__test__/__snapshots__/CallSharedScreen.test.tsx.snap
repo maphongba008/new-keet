@@ -1,0 +1,715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallSharedScreen component tests renders null with empty stream 1`] = `null`;
+
+exports[`CallSharedScreen component tests renders with valid stream 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "borderColor": "#323A4C",
+        "borderRadius": 32,
+        "borderWidth": 1,
+        "flex": 1,
+        "marginHorizontal": 16,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "overflow": "hidden",
+          },
+          {
+            "borderRadius": 32,
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "transform": [
+                {
+                  "translateX": 0,
+                },
+                {
+                  "translateY": 0,
+                },
+                {
+                  "scale": 1,
+                },
+              ],
+            },
+            {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "borderRadius": 32,
+              "flex": 1,
+            }
+          }
+          testID="webrtc_video"
+          trackId="trackId"
+        >
+          <Text>
+            HolepunchWebRTCVideoView
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="call_shared_screen_expand_button"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "opacity": 1,
+          },
+          [
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            {
+              "height": 30,
+              "width": 30,
+            },
+            {
+              "backgroundColor": "#151823",
+              "borderRadius": 8,
+              "height": undefined,
+              "padding": 16,
+              "position": "absolute",
+              "right": 16,
+              "top": 16,
+              "width": undefined,
+            },
+          ],
+        ]
+      }
+      testID="call_shared_screen_expand_button"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        color="#CED3DC"
+        fill="#CED3DC"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="svg-icon-arrowUpRightAndArrowDownLeftFromCenter"
+        tintColor="#CED3DC"
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.063 4.5V9a.563.563 0 0 1-1.125 0V5.858l-4.29 4.29a.562.562 0 0 1-.796-.796l4.29-4.29H15a.562.562 0 1 1 0-1.125h4.5a.56.56 0 0 1 .563.563m-10.71 9.353-4.29 4.29V15a.562.562 0 1 0-1.125 0v4.5a.56.56 0 0 0 .562.563H9a.563.563 0 0 0 0-1.125H5.858l4.29-4.29a.562.562 0 0 0-.796-.796m10.147.585a.56.56 0 0 0-.562.562v3.142l-4.29-4.29a.562.562 0 0 0-.796.796l4.29 4.29H15a.562.562 0 1 0 0 1.125h4.5a.56.56 0 0 0 .563-.563V15a.56.56 0 0 0-.563-.562M5.858 5.063H9a.563.563 0 1 0 0-1.125H4.5a.563.563 0 0 0-.562.562V9a.563.563 0 1 0 1.124 0V5.858l4.29 4.29a.562.562 0 0 0 .796-.796z" fill="#fff"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4291744732,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M20.063 4.5V9a.563.563 0 0 1-1.125 0V5.858l-4.29 4.29a.562.562 0 0 1-.796-.796l4.29-4.29H15a.562.562 0 1 1 0-1.125h4.5a.56.56 0 0 1 .563.563m-10.71 9.353-4.29 4.29V15a.562.562 0 1 0-1.125 0v4.5a.56.56 0 0 0 .562.563H9a.563.563 0 0 0 0-1.125H5.858l4.29-4.29a.562.562 0 0 0-.796-.796m10.147.585a.56.56 0 0 0-.562.562v3.142l-4.29-4.29a.562.562 0 0 0-.796.796l4.29 4.29H15a.562.562 0 1 0 0 1.125h4.5a.56.56 0 0 0 .563-.563V15a.56.56 0 0 0-.563-.562M5.858 5.063H9a.563.563 0 1 0 0-1.125H4.5a.563.563 0 0 0-.562.562V9a.563.563 0 1 0 1.124 0V5.858l4.29 4.29a.562.562 0 0 0 .796-.796z"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#3E404B",
+            "borderRadius": 16,
+            "bottom": 8,
+            "flexDirection": "row",
+            "paddingHorizontal": 8,
+            "paddingVertical": 4,
+            "position": "absolute",
+            "right": 16,
+          },
+          undefined,
+          undefined,
+          {
+            "maxWidth": undefined,
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={12}
+        bbWidth={12}
+        color="#26D2E8"
+        fill="#26D2E8"
+        focusable={false}
+        height={12}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 12,
+              "width": 12,
+            },
+          ]
+        }
+        testID="svg-icon-waveformLines"
+        tintColor="#26D2E8"
+        vbHeight={24}
+        vbWidth={24}
+        width={12}
+        xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 9v6a.75.75 0 1 1-1.5 0V9a.75.75 0 0 1 1.5 0m3-6.75A.75.75 0 0 0 7.5 3v18A.75.75 0 1 0 9 21V3a.75.75 0 0 0-.75-.75m3.75 3a.75.75 0 0 0-.75.75v12a.75.75 0 1 0 1.5 0V6a.75.75 0 0 0-.75-.75m3.75 3A.75.75 0 0 0 15 9v6a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75m3.75-1.5a.75.75 0 0 0-.75.75v9a.75.75 0 1 0 1.5 0v-9a.75.75 0 0 0-.75-.75" fill="#fff"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4280734440,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M5.25 9v6a.75.75 0 1 1-1.5 0V9a.75.75 0 0 1 1.5 0m3-6.75A.75.75 0 0 0 7.5 3v18A.75.75 0 1 0 9 21V3a.75.75 0 0 0-.75-.75m3.75 3a.75.75 0 0 0-.75.75v12a.75.75 0 1 0 1.5 0V6a.75.75 0 0 0-.75-.75m3.75 3A.75.75 0 0 0 15 9v6a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75m3.75-1.5a.75.75 0 0 0-.75.75v9a.75.75 0 1 0 1.5 0v-9a.75.75 0 0 0-.75-.75"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexShrink": 1,
+              "marginTop": 12,
+            },
+            {
+              "maxWidth": undefined,
+            },
+            {
+              "marginTop": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#ffffff",
+                "flexShrink": 1,
+                "fontFamily": "OpenSans-Regular",
+                "fontSize": 12,
+                "includeFontPadding": false,
+                "marginHorizontal": 4,
+              },
+              {
+                "color": "#ffffff",
+                "fontFamily": "OpenSans-Regular",
+                "fontSize": 10,
+                "includeFontPadding": false,
+                "marginLeft": 4,
+              },
+              undefined,
+            ]
+          }
+        >
+          Connecting...
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "paddingTop": 8,
+        },
+        {
+          "marginTop": 8,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      data={[]}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={0.0001}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View />
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`CallSharedScreen component tests renders with valid stream and expand button press 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "borderColor": "#323A4C",
+        "borderRadius": 32,
+        "borderWidth": 1,
+        "flex": 1,
+        "marginHorizontal": 16,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "overflow": "hidden",
+          },
+          {
+            "borderRadius": 32,
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "transform": [
+                {
+                  "translateX": 0,
+                },
+                {
+                  "translateY": 0,
+                },
+                {
+                  "scale": 1,
+                },
+              ],
+            },
+            {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "borderRadius": 32,
+              "flex": 1,
+            }
+          }
+          testID="webrtc_video"
+          trackId="trackId"
+        >
+          <Text>
+            HolepunchWebRTCVideoView
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="call_shared_screen_expand_button"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "opacity": 0.66,
+          },
+          [
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            {
+              "height": 30,
+              "width": 30,
+            },
+            {
+              "backgroundColor": "#151823",
+              "borderRadius": 8,
+              "height": undefined,
+              "padding": 16,
+              "position": "absolute",
+              "right": 16,
+              "top": 16,
+              "width": undefined,
+            },
+          ],
+        ]
+      }
+      testID="call_shared_screen_expand_button"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        color="#CED3DC"
+        fill="#CED3DC"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="svg-icon-arrowDownLeftAndArrowUpRightToCenter"
+        tintColor="#CED3DC"
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m19.898 4.898-5.04 5.04H18a.562.562 0 1 1 0 1.124h-4.5a.563.563 0 0 1-.562-.562V6a.563.563 0 0 1 1.124 0v3.143l5.04-5.04a.562.562 0 0 1 .796.795m-9.398 8.04H6a.562.562 0 0 0 0 1.124h3.142l-5.04 5.04a.563.563 0 1 0 .795.796l5.04-5.04V18a.563.563 0 0 0 1.126 0v-4.5a.56.56 0 0 0-.563-.562" fill="#fff"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4291744732,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m19.898 4.898-5.04 5.04H18a.562.562 0 1 1 0 1.124h-4.5a.563.563 0 0 1-.562-.562V6a.563.563 0 0 1 1.124 0v3.143l5.04-5.04a.562.562 0 0 1 .796.795m-9.398 8.04H6a.562.562 0 0 0 0 1.124h3.142l-5.04 5.04a.563.563 0 1 0 .795.796l5.04-5.04V18a.563.563 0 0 0 1.126 0v-4.5a.56.56 0 0 0-.563-.562"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#3E404B",
+            "borderRadius": 16,
+            "bottom": 8,
+            "flexDirection": "row",
+            "paddingHorizontal": 8,
+            "paddingVertical": 4,
+            "position": "absolute",
+            "right": 16,
+          },
+          undefined,
+          undefined,
+          {
+            "maxWidth": undefined,
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={12}
+        bbWidth={12}
+        color="#26D2E8"
+        fill="#26D2E8"
+        focusable={false}
+        height={12}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 12,
+              "width": 12,
+            },
+          ]
+        }
+        testID="svg-icon-waveformLines"
+        tintColor="#26D2E8"
+        vbHeight={24}
+        vbWidth={24}
+        width={12}
+        xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 9v6a.75.75 0 1 1-1.5 0V9a.75.75 0 0 1 1.5 0m3-6.75A.75.75 0 0 0 7.5 3v18A.75.75 0 1 0 9 21V3a.75.75 0 0 0-.75-.75m3.75 3a.75.75 0 0 0-.75.75v12a.75.75 0 1 0 1.5 0V6a.75.75 0 0 0-.75-.75m3.75 3A.75.75 0 0 0 15 9v6a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75m3.75-1.5a.75.75 0 0 0-.75.75v9a.75.75 0 1 0 1.5 0v-9a.75.75 0 0 0-.75-.75" fill="#fff"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4280734440,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M5.25 9v6a.75.75 0 1 1-1.5 0V9a.75.75 0 0 1 1.5 0m3-6.75A.75.75 0 0 0 7.5 3v18A.75.75 0 1 0 9 21V3a.75.75 0 0 0-.75-.75m3.75 3a.75.75 0 0 0-.75.75v12a.75.75 0 1 0 1.5 0V6a.75.75 0 0 0-.75-.75m3.75 3A.75.75 0 0 0 15 9v6a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75m3.75-1.5a.75.75 0 0 0-.75.75v9a.75.75 0 1 0 1.5 0v-9a.75.75 0 0 0-.75-.75"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexShrink": 1,
+              "marginTop": 12,
+            },
+            {
+              "maxWidth": undefined,
+            },
+            {
+              "marginTop": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#ffffff",
+                "flexShrink": 1,
+                "fontFamily": "OpenSans-Regular",
+                "fontSize": 12,
+                "includeFontPadding": false,
+                "marginHorizontal": 4,
+              },
+              {
+                "color": "#ffffff",
+                "fontFamily": "OpenSans-Regular",
+                "fontSize": 10,
+                "includeFontPadding": false,
+                "marginLeft": 4,
+              },
+              undefined,
+            ]
+          }
+        >
+          Connecting...
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,9 @@
+{
+  "network": "regtest",
+  "electrum_host": "ws://34.65.144.199",
+  "electrum_port": "8001",
+  "token_contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "web3_indexer_ws": "ws://34.65.144.199/eth/hardhat/indexer/ws",
+  "web3_indexer": "http://34.65.144.199/eth/hardhat/indexer/rpc",
+  "web3": "ws://34.65.144.199/eth/hardhat/indexer/web3"
+}

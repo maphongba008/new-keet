@@ -1,0 +1,23 @@
+diff --git a/metro.config.js b/metro.config.js
+index 72239566..016d680c 100644
+--- a/metro.config.js
++++ b/metro.config.js
+@@ -7,6 +7,18 @@ const {
+ 
+ const projectRoot = __dirname
+ const defaultConfig = getDefaultConfig(projectRoot)
++const path = require('path');
++const keetStoreAbsolutePath = '$ABSOLUTE_PATH'
++const keetStorePath = keetStoreAbsolutePath || path.resolve(__dirname + '$RELATIVE_PATH')
++
++defaultConfig.watchFolders = [keetStorePath];
++defaultConfig.resolver.extraNodeModules = {
++  '@holepunchto/keet-store': keetStorePath,
++};
++defaultConfig.resolver.nodeModulesPaths = [
++  path.resolve(projectRoot, 'node_modules'),
++  path.resolve(keetStorePath, 'node_modules'),
++];
+ 
+ const config = {
+   ...defaultConfig,

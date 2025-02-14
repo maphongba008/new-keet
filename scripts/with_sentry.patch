@@ -1,0 +1,83 @@
+diff --git a/ios/.xcode.env b/ios/.xcode.env
+index 450c4a68..2e3c85ef 100644
+--- a/ios/.xcode.env
++++ b/ios/.xcode.env
+@@ -9,4 +9,4 @@
+ # For example, to use nvm with brew, add the following line
+ # . "$(brew --prefix nvm)/nvm.sh" --no-use
+ export NODE_BINARY=$(command -v node)
+-export SENTRY_DISABLE_AUTO_UPLOAD=true # Temporarily disable source map upload
++export SENTRY_DISABLE_AUTO_UPLOAD=false # Temporarily disable source map upload
+diff --git a/metro.config.js b/metro.config.js
+index 72239566..7100c31c 100644
+--- a/metro.config.js
++++ b/metro.config.js
+@@ -1,6 +1,6 @@
+ // Learn more https://docs.expo.io/guides/customizing-metro
+ const { getDefaultConfig } = require('expo/metro-config')
+-// const { createSentryMetroSerializer } = require('@sentry/react-native/metro')
++const { createSentryMetroSerializer } = require('@sentry/react-native/metro')
+ const {
+   withExpoSerializers,
+ } = require('@expo/metro-config/build/serializer/withExpoSerializers')
+@@ -21,7 +21,7 @@ const config = {
+   },
+   serializer: {
+     ...defaultConfig.serializer,
+-    // customSerializer: createSentryMetroSerializer(),
++    customSerializer: createSentryMetroSerializer(),
+   },
+ }
+
+diff --git a/react-native.config.js b/react-native.config.js
+deleted file mode 100644
+index 439b4589..00000000
+--- a/react-native.config.js
++++ /dev/null
+@@ -1,10 +0,0 @@
+-module.exports = {
+-  dependencies: {
+-    '@sentry/react-native': {
+-      platforms: {
+-        android: null,
+-        ios: null,
+-      },
+-    },
+-  },
+-}
+diff --git a/src/lib/build.constants.ts b/src/lib/build.constants.ts
+index cee59ce7..93ef3168 100644
+--- a/src/lib/build.constants.ts
++++ b/src/lib/build.constants.ts
+@@ -29,7 +29,7 @@ const STAGING = {
+   ...PRODUCT,
+   // define flags in alphabetical order
+   IS_CHAT_CACHE_ENABLED: true,
+-  IS_SENTRY_ENABLED: false,
++  IS_SENTRY_ENABLED: true,
+   SHOW_BROADCAST_FILTER: false,
+   SHOW_CHANNEL_UI: true,
+   SHOW_CLEAN_DEVICE_SCREEN: true,
+   diff --git a/src/lib/sentry.ts b/src/lib/sentry.ts
+index 82789415..05a3565b 100644
+--- a/src/lib/sentry.ts
++++ b/src/lib/sentry.ts
+@@ -2,17 +2,7 @@ import { IS_SENTRY_ENABLED } from './build.constants'
+ 
+ const SENTRY_IGNORE_ERRORS: string[] = ['User did not share']
+ 
+-export const Sentry = {
+-  init: (_config: any) => {},
+-  wrap: (children: any) => children,
+-  withScope: (_scope: any) => {},
+-  captureException: (
+-    _exception: any,
+-    _hint?: {
+-      level?: 'fatal' | 'error' | 'warning' | 'log' | 'info' | 'debug'
+-    },
+-  ): string => '',
+-}
++export const Sentry = require('@sentry/react-native')
+ 
+ export const initSentry = (): any => {
+   if (IS_SENTRY_ENABLED) {

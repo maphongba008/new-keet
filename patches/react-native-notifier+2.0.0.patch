@@ -1,0 +1,38 @@
+diff --git a/node_modules/react-native-notifier/lib/typescript/src/components/Notification.d.ts b/node_modules/react-native-notifier/lib/typescript/src/components/Notification.d.ts
+index bc19336..dc8e75d 100644
+--- a/node_modules/react-native-notifier/lib/typescript/src/components/Notification.d.ts
++++ b/node_modules/react-native-notifier/lib/typescript/src/components/Notification.d.ts
+@@ -26,6 +26,7 @@ export interface NotificationComponentProps {
+     /** The style to use for rendering image
+      * @default null */
+     imageStyle?: StyleProp<ImageStyle>;
++    testID?: string;
+ }
+ interface NotificationComponentAllProps extends NotificationComponentProps {
+     title?: string;
+diff --git a/node_modules/react-native-notifier/src/components/Notification.tsx b/node_modules/react-native-notifier/src/components/Notification.tsx
+index 1a10630..1125555 100644
+--- a/node_modules/react-native-notifier/src/components/Notification.tsx
++++ b/node_modules/react-native-notifier/src/components/Notification.tsx
+@@ -90,6 +90,7 @@ export interface NotificationComponentProps {
+   /** The style to use for rendering image
+    * @default null */
+   imageStyle?: StyleProp<ImageStyle>;
++  testID?: string;
+ }
+ 
+ interface NotificationComponentAllProps extends NotificationComponentProps {
+@@ -110,11 +111,12 @@ const NotificationComponent: React.FunctionComponent<
+   maxTitleLines,
+   maxDescriptionLines,
+   containerStyle,
++  testID,
+ }) => {
+   const Container = ContainerComponent ?? SafeAreaView;
+   return (
+     <Container>
+-      <View style={[s.container, containerStyle]}>
++      <View style={[s.container, containerStyle]} accessible accessibilityLabel={testID} testID={testID}>
+         {!!imageSource && (
+           <Image style={[s.image, imageStyle]} source={imageSource} />
+         )}

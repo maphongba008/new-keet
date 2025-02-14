@@ -1,0 +1,163 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+apply plugin: 'org.jetbrains.kotlin.plugin.serialization'
+
+project.ext.envConfigFiles = [
+  store: ".env.store",
+  internal: ".env.internal",
+  experimental: ".env.experimental",
+  sv: ".env.sv",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+group = 'io.keet'
+version = '0.1.0'
+
+buildscript {
+  def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
+  if (expoModulesCorePlugin.exists()) {
+    apply from: expoModulesCorePlugin
+    applyKotlinExpoModulesCorePlugin()
+  }
+
+  // Simple helper that allows the root project to override versions declared by this library.
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+
+  // Ensures backward compatibility
+  ext.getKotlinVersion = {
+    if (ext.has("kotlinVersion")) {
+      ext.kotlinVersion()
+    } else {
+      ext.safeExtGet("kotlinVersion", "1.8.10")
+    }
+  }
+
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${getKotlinVersion()}")
+    classpath("org.jetbrains.kotlin:kotlin-serialization:${getKotlinVersion()}")
+  }
+}
+
+// Creating sources with comments
+task androidSourcesJar(type: Jar) {
+  archiveClassifier = 'sources'
+  from android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate {
+  publishing {
+    publications {
+      release(MavenPublication) {
+        from components.release
+        // Add additional sourcesJar to artifacts
+        artifact(androidSourcesJar)
+      }
+    }
+    repositories {
+      maven {
+        url = mavenLocal().url
+      }
+    }
+  }
+}
+
+def reactNativeArchitectures() {
+    def value = project.getProperties().get("reactNativeArchitectures")
+    return value ? value.split(",") : ["x86", "x86_64", "arm64-v8a"]
+}
+
+android {
+  compileSdkVersion safeExtGet("compileSdkVersion", 31)
+  namespace "io.keet"
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_17.majorVersion
+  }
+
+  defaultConfig {
+    minSdkVersion safeExtGet("minSdkVersion", 21)
+    targetSdkVersion safeExtGet("targetSdkVersion", 31)
+    versionCode 1
+    versionName "0.1.0"
+
+    externalNativeBuild {
+      cmake {
+        arguments "-DANDROID_STL=c++_shared",
+          "-DROOT_DIR=$rootDir/..",
+          "-DKEET_CORE=$rootDir/../mobile-core",
+          "-DCMAKE_BUILD_TYPE=Release"
+        cppFlags "-std=c++17"
+        cFlags "-std=c11"
+        abiFilters reactNativeArchitectures()
+      }
+    }
+    packagingOptions {
+      excludes = [
+        "**/libc++_shared.so",
+        "**/libturbomodulejsijni.so",
+        "**/libjsi.so",
+        "**/llibfbjni.so",
+        "**/libreactnative.so",
+        "**/libreact_nativemodule_core.so",
+        "**/META-INF/com.android.tools/proguard/coroutines.pro",
+        "**/META-INF/MANIFEST.MF"
+      ]
+    }
+    buildFeatures {
+      buildConfig = true
+      prefab true
+    }
+    buildTypes {
+      release {
+        minifyEnabled false
+      }
+    }
+  }
+  lintOptions {
+    abortOnError false
+  }
+
+  externalNativeBuild {
+    cmake {
+      path "src/main/cpp/CMakeLists.txt"
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation project(':expo-modules-core')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getKotlinVersion()}"
+  implementation "org.jetbrains.kotlin:kotlin-reflect:${getKotlinVersion()}"
+
+  implementation "com.facebook.react:react-android"
+
+  implementation("com.google.firebase:firebase-messaging-ktx:23.4.1") {
+    exclude(group: "com.google.firebase", module: "firebase-core")
+    exclude(group: "com.google.firebase", module: "firebase-analytics")
+    exclude(group: "com.google.firebase", module: "firebase-measurement-connector")
+    exclude(group: "com.google.android.gms", module: "play-services-ads")
+    exclude(group: "com.google.android.gms", module: "play-services-ads-identifier")
+  }
+
+  implementation 'androidx.core:core-ktx:1.12.0'
+  implementation 'net.edwardday.serialization:kprefs:0.12.2'
+
+  implementation 'com.github.lincollincol:amplituda:2.2.2'
+  implementation 'com.github.Dimezis:BlurView:version-2.0.6'
+}

@@ -1,0 +1,51 @@
+diff --git a/node_modules/react-native-walkthrough-tooltip/src/tooltip.d.ts b/node_modules/react-native-walkthrough-tooltip/src/tooltip.d.ts
+index bfbc296..5c47b6f 100644
+--- a/node_modules/react-native-walkthrough-tooltip/src/tooltip.d.ts
++++ b/node_modules/react-native-walkthrough-tooltip/src/tooltip.d.ts
+@@ -4,6 +4,7 @@
+ declare module 'react-native-walkthrough-tooltip' {
+   import React from 'react';
+   import { GestureResponderEvent, StyleProp, ViewStyle } from 'react-native';
++  import { AnimatedStyle } from 'react-native-reanimated';
+ 
+   type Orientation =
+     | 'portrait'
+@@ -40,7 +41,7 @@ declare module 'react-native-walkthrough-tooltip' {
+     contentStyle?: StyleProp<ViewStyle>;
+ 
+     // Styles the tooltip that wraps the arrow and content elements
+-    tooltipStyle?: StyleProp<ViewStyle>;
++    tooltipStyle?: StyleProp<ViewStyle | AnimatedStyle>;
+ 
+     // Styles the View element that wraps the children to clone it
+     childrenWrapperStyle?: StyleProp<ViewStyle>;
+diff --git a/node_modules/react-native-walkthrough-tooltip/src/tooltip.js b/node_modules/react-native-walkthrough-tooltip/src/tooltip.js
+index 3098692..4452ae5 100644
+--- a/node_modules/react-native-walkthrough-tooltip/src/tooltip.js
++++ b/node_modules/react-native-walkthrough-tooltip/src/tooltip.js
+@@ -22,6 +22,7 @@ import {
+ } from './geom';
+ import styleGenerator from './styles';
+ import TooltipChildrenContext from './tooltip-children.context';
++import Animated from 'react-native-reanimated';
+ 
+ export { TooltipChildrenContext };
+ 
+@@ -431,7 +432,7 @@ class Tooltip extends Component {
+       >
+         <View style={generatedStyles.containerStyle}>
+           <View style={[generatedStyles.backgroundStyle]}>
+-            <View style={generatedStyles.tooltipStyle}>
++            <Animated.View style={generatedStyles.tooltipStyle}>
+               {hasChildren ? <View style={generatedStyles.arrowStyle} /> : null}
+               <View
+                 onLayout={this.measureContent}
+@@ -444,7 +445,7 @@ class Tooltip extends Component {
+                   {this.props.content}
+                 </TouchableWithoutFeedback>
+               </View>
+-            </View>
++            </Animated.View>
+           </View>
+           {hasChildren && this.props.showChildInTooltip
+             ? this.renderChildInTooltip()

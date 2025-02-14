@@ -1,0 +1,5 @@
+export const ON_BOARDING = 'ON_BOARDING'
+export const SETUP_NAME = 'SETUP_NAME'
+export const NEW_VERSION = 'NEW_VERSION'
+export const IDENTITY = 'IDENTITY'
+export const IDENTITY_INTRO = 'IDENTITY_INTRO'

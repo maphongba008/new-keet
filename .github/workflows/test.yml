@@ -1,0 +1,44 @@
+name: 🚦 Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository 📦
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@holepunchto'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          npm install --ignore-scripts
+          npx patch-package
+        timeout-minutes: 20
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Find related PR
+        uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+
+      - name: Run tests
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          skip-step: install
+          annotations: failed-tests
+          prnumber: ${{ steps.findPr.outputs.number }}

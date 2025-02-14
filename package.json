@@ -168,11 +168,7 @@
   "resolutions": {
     "@types/react": "^18"
   },
-  "expo": {
-    "autolinking": {
-      "nativeModulesDir": "./keet-expo-modules"
-    }
-  },
+  "expo": {},
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,css}": [
       "npm run lint-fix",

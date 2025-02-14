@@ -1,0 +1,24 @@
+name: Pull Request Notify
+env:
+  SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL_ID }}
+  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+  SLACK_COLOR: '#36a64f'
+
+on:
+  pull_request:
+
+jobs:
+  notify-on-pull-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Convert changelog for slack mrkdwn
+        id: prMrkdwn
+        uses: LoveToKnow/slackify-markdown-action@v1.1.1
+        with:
+          text: Please review ${{ github.event.pull_request.title }}

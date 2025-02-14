@@ -1,0 +1,82 @@
+diff --git a/node_modules/expo-image/android/src/main/java/expo/modules/image/ExpoImageModule.kt b/node_modules/expo-image/android/src/main/java/expo/modules/image/ExpoImageModule.kt
+index ee9f440..9d9db7e 100644
+--- a/node_modules/expo-image/android/src/main/java/expo/modules/image/ExpoImageModule.kt
++++ b/node_modules/expo-image/android/src/main/java/expo/modules/image/ExpoImageModule.kt
+@@ -161,6 +161,24 @@ class ExpoImageModule : Module() {
+       return@AsyncFunction true
+     }
+ 
++    AsyncFunction("clearImageCache") { cacheKey: String ->
++      val context = appContext.reactContext ?: return@AsyncFunction null
++
++      val glideUrl = GlideUrl(cacheKey)
++      val target = Glide.with(context).asFile().load(glideUrl).onlyRetrieveFromCache(true).submit()
++      var result = false
++
++      try {
++        result = target.get().delete()
++        return@AsyncFunction result
++      } catch (e: Exception) {
++        e.printStackTrace()
++      }
++
++      return@AsyncFunction result
++    }
++
++
+     AsyncFunction("getCachePathAsync") { cacheKey: String ->
+       val context = appContext.reactContext ?: return@AsyncFunction null
+ 
+diff --git a/node_modules/expo-image/build/Image.d.ts b/node_modules/expo-image/build/Image.d.ts
+index 44ea175..0cde5bd 100644
+--- a/node_modules/expo-image/build/Image.d.ts
++++ b/node_modules/expo-image/build/Image.d.ts
+@@ -51,6 +51,8 @@ export declare class Image extends React.PureComponent<ImageProps> {
+      * Resolves to `false` on Web.
+      */
+     static clearDiskCache(): Promise<boolean>;
++
++    static clearImageCache(key: string): Promise<boolean>
+     /**
+      * Asynchronously checks if an image exists in the disk cache and resolves to
+      * the path of the cached image if it does.
+diff --git a/node_modules/expo-image/ios/ImageModule.swift b/node_modules/expo-image/ios/ImageModule.swift
+index 4bab386..3e14eb2 100644
+--- a/node_modules/expo-image/ios/ImageModule.swift
++++ b/node_modules/expo-image/ios/ImageModule.swift
+@@ -176,6 +176,19 @@ public final class ImageModule: Module {
+       }
+     }
+ 
++    AsyncFunction("clearImageCache") { (cacheKey: String, promise: Promise) in
++      SDImageCache.shared.diskImageExists(withKey: cacheKey) { exists in
++        if exists {
++          SDImageCache.shared.removeImageFromMemory(forKey: cacheKey)
++          SDImageCache.shared.removeImageFromDisk(forKey: cacheKey)
++          promise.resolve(true)
++        } else {
++          promise.resolve(false)
++        }
++      }
++    }
++
++
+     AsyncFunction("getCachePathAsync") { (cacheKey: String, promise: Promise) in
+       /*
+        We need to check if the image exists in the cache first since `cachePath` will
+diff --git a/node_modules/expo-image/src/Image.tsx b/node_modules/expo-image/src/Image.tsx
+index 7721bd9..411967c 100644
+--- a/node_modules/expo-image/src/Image.tsx
++++ b/node_modules/expo-image/src/Image.tsx
+@@ -100,6 +100,11 @@ export class Image extends React.PureComponent<ImageProps> {
+     return await ImageModule.clearMemoryCache();
+   }
+ 
++  static async clearImageCache(cacheKey: string): Promise<boolean> {
++    return await ImageModule.clearImageCache(cacheKey);
++  }
++    
++
+   /**
+    * Asynchronously clears all images from the disk cache.
+    * @platform android

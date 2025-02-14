@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App bottom sheet works correctly should have style set when isTransparent is true 1`] = `
+<View
+  backdropComponent={[Function]}
+  backgroundStyle={
+    {
+      "backgroundColor": "transparent",
+    }
+  }
+  enableContentPanningGesture={false}
+  enableDismissOnClose={true}
+  enableDynamicSizing={true}
+  enablePanDownToClose={true}
+  handleIndicatorStyle={
+    {
+      "height": 0,
+    }
+  }
+  index={0}
+  keyboardBlurBehavior="restore"
+  onChange={[Function]}
+  onDismiss={[Function]}
+  style={
+    {
+      "marginTop": 0,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "paddingBottom": 16,
+        "paddingHorizontal": 12,
+      }
+    }
+    testID="bottom_sheet_view"
+  >
+    <View
+      testID="test_bottom_sheet"
+    >
+      <Text>
+        Test Component
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`App bottom sheet works correctly should render sheet content when we provide valid bottomSheetType 1`] = `
+<View
+  backdropComponent={[Function]}
+  backgroundStyle={
+    {
+      "backgroundColor": "#151823",
+    }
+  }
+  enableContentPanningGesture={false}
+  enableDismissOnClose={true}
+  enableDynamicSizing={true}
+  enablePanDownToClose={true}
+  handleIndicatorStyle={
+    {
+      "backgroundColor": "#ffffff",
+    }
+  }
+  index={0}
+  keyboardBlurBehavior="restore"
+  onChange={[Function]}
+  onDismiss={[Function]}
+  style={
+    {
+      "marginTop": 0,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#151823",
+          "flexDirection": "column",
+          "justifyContent": "flex-start",
+          "padding": 16,
+        },
+        {
+          "paddingBottom": 16,
+        },
+        undefined,
+      ]
+    }
+    testID="bottom_sheet_view"
+  >
+    <View
+      testID="test_bottom_sheet"
+    >
+      <Text>
+        Test Component
+      </Text>
+    </View>
+  </View>
+</View>
+`;

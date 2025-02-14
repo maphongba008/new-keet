@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component tests should apply small style when small prop is provided 1`] = `
+<Image
+  accessibilityLabel="avatar_image"
+  accessible={true}
+  cachePolicy="memory"
+  contentFit="contain"
+  recyclingKey="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAg="
+  source={
+    {
+      "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAg=",
+    }
+  }
+  style={
+    {
+      "borderRadius": 15,
+      "height": 30,
+      "width": 30,
+    }
+  }
+  testID="avatar_image"
+/>
+`;
+
+exports[`Avatar component tests should match snapshot and apply RGB color 1`] = `
+<View
+  accessibilityLabel="avatar_image"
+  accessible={true}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#ff0000",
+      "borderRadius": 36,
+      "height": 72,
+      "justifyContent": "center",
+      "width": 72,
+    }
+  }
+  testID="avatar_image"
+>
+  <Text>
+    icon - 
+    keetOutline
+  </Text>
+</View>
+`;
+
+exports[`Avatar component tests should match snapshot and apply base64 icon 1`] = `
+<Image
+  accessibilityLabel="avatar_image"
+  accessible={true}
+  cachePolicy="memory"
+  contentFit="contain"
+  recyclingKey="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAg="
+  source={
+    {
+      "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAg=",
+    }
+  }
+  style={
+    {
+      "borderRadius": 36,
+      "height": 72,
+      "width": 72,
+    }
+  }
+  testID="avatar_image"
+/>
+`;
+
+exports[`Avatar component tests should match snapshot and apply named color 1`] = `
+<View
+  accessibilityLabel="avatar_image"
+  accessible={true}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "borderRadius": 36,
+      "height": 72,
+      "justifyContent": "center",
+      "width": 72,
+    }
+  }
+  testID="avatar_image"
+>
+  <Text>
+    icon - 
+    keetOutline
+  </Text>
+</View>
+`;

@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox component tests renders correctly when default props is passed 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "opacity": 1,
+      },
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderColor": "#26D2E8",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "height": 20,
+          "justifyContent": "center",
+          "marginRight": 8,
+          "width": 20,
+        },
+        {
+          "backgroundColor": "#26D2E8",
+        },
+        undefined,
+      ]
+    }
+    testID="checkbox_checked"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="100%"
+      bbWidth="100%"
+      color="#141925"
+      fill="#141925"
+      focusable={false}
+      height="100%"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="svg-icon-checkFat"
+      tintColor="#141925"
+      vbHeight={24}
+      vbWidth={24}
+      width="100%"
+      xml="<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m21.796 7.54594-12.00004 11.99996c-.10452.1049-.22871.1881-.36546.2449-.13674.0568-.28335.086-.43142.086-.14806 0-.29467-.0292-.43142-.086-.13674-.0568-.26094-.14-.36545-.2449l-5.25-5.25c-.10465-.1046-.18766-.2288-.24429-.3656-.05664-.1367-.08579-.2832-.08579-.4312s.02915-.2946.08579-.4313c.05663-.1367.13964-.261.24429-.3656.10464-.1047.22888-.1877.36561-.2443s.28327-.0858.43126-.0858c.148 0 .29454.0292.43127.0858s.26096.1396.36561.2443l4.45406 4.454 11.20408-11.20214c.2113-.21134.498-.33007.7969-.33007.2988 0 .5855.11873.7968.33007.2114.21135.3301.49799.3301.79688 0 .29888-.1187.58553-.3301.79687z" /></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4279507237,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="m21.796 7.54594-12.00004 11.99996c-.10452.1049-.22871.1881-.36546.2449-.13674.0568-.28335.086-.43142.086-.14806 0-.29467-.0292-.43142-.086-.13674-.0568-.26094-.14-.36545-.2449l-5.25-5.25c-.10465-.1046-.18766-.2288-.24429-.3656-.05664-.1367-.08579-.2832-.08579-.4312s.02915-.2946.08579-.4313c.05663-.1367.13964-.261.24429-.3656.10464-.1047.22888-.1877.36561-.2443s.28327-.0858.43126-.0858c.148 0 .29454.0292.43127.0858s.26096.1396.36561.2443l4.45406 4.454 11.20408-11.20214c.2113-.21134.498-.33007.7969-.33007.2988 0 .5855.11873.7968.33007.2114.21135.3301.49799.3301.79688 0 .29888-.1187.58553-.3301.79687z"
+          fill={
+            {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "flex": 1,
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Checkbox component tests should be checked when value is true 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "opacity": 1,
+      },
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderColor": "#26D2E8",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "height": 20,
+          "justifyContent": "center",
+          "marginRight": 8,
+          "width": 20,
+        },
+        {
+          "backgroundColor": "#26D2E8",
+        },
+        undefined,
+      ]
+    }
+    testID="checkbox_checked"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="100%"
+      bbWidth="100%"
+      color="#141925"
+      fill="#141925"
+      focusable={false}
+      height="100%"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="svg-icon-checkFat"
+      tintColor="#141925"
+      vbHeight={24}
+      vbWidth={24}
+      width="100%"
+      xml="<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m21.796 7.54594-12.00004 11.99996c-.10452.1049-.22871.1881-.36546.2449-.13674.0568-.28335.086-.43142.086-.14806 0-.29467-.0292-.43142-.086-.13674-.0568-.26094-.14-.36545-.2449l-5.25-5.25c-.10465-.1046-.18766-.2288-.24429-.3656-.05664-.1367-.08579-.2832-.08579-.4312s.02915-.2946.08579-.4313c.05663-.1367.13964-.261.24429-.3656.10464-.1047.22888-.1877.36561-.2443s.28327-.0858.43126-.0858c.148 0 .29454.0292.43127.0858s.26096.1396.36561.2443l4.45406 4.454 11.20408-11.20214c.2113-.21134.498-.33007.7969-.33007.2988 0 .5855.11873.7968.33007.2114.21135.3301.49799.3301.79688 0 .29888-.1187.58553-.3301.79687z" /></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4279507237,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="m21.796 7.54594-12.00004 11.99996c-.10452.1049-.22871.1881-.36546.2449-.13674.0568-.28335.086-.43142.086-.14806 0-.29467-.0292-.43142-.086-.13674-.0568-.26094-.14-.36545-.2449l-5.25-5.25c-.10465-.1046-.18766-.2288-.24429-.3656-.05664-.1367-.08579-.2832-.08579-.4312s.02915-.2946.08579-.4313c.05663-.1367.13964-.261.24429-.3656.10464-.1047.22888-.1877.36561-.2443s.28327-.0858.43126-.0858c.148 0 .29454.0292.43127.0858s.26096.1396.36561.2443l4.45406 4.454 11.20408-11.20214c.2113-.21134.498-.33007.7969-.33007.2988 0 .5855.11873.7968.33007.2114.21135.3301.49799.3301.79688 0 .29888-.1187.58553-.3301.79687z"
+          fill={
+            {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "flex": 1,
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Checkbox component tests should be unchecked when value is false 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "opacity": 1,
+      },
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderColor": "#26D2E8",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "height": 20,
+          "justifyContent": "center",
+          "marginRight": 8,
+          "width": 20,
+        },
+        false,
+        undefined,
+      ]
+    }
+    testID="checkbox_checked"
+  />
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "flex": 1,
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

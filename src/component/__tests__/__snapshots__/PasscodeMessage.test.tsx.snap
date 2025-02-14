@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PasscodeMessage Snapshot should match the snapshot with a success message 1`] = `
+<Text
+  style={
+    {
+      "color": "#53EA98",
+      "marginTop": 8,
+      "textAlign": "center",
+    }
+  }
+>
+  Passcode correct
+</Text>
+`;
+
+exports[`PasscodeMessage Snapshot should match the snapshot with an error message 1`] = `
+<Text
+  style={
+    {
+      "color": "#FF6D6D",
+      "marginTop": 8,
+      "textAlign": "center",
+    }
+  }
+>
+  Passcode incorrect
+</Text>
+`;
+
+exports[`PasscodeMessage Snapshot should match the snapshot with no message 1`] = `null`;

@@ -1,0 +1,25 @@
+diff --git a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
+index e63260a..f64a203 100644
+--- a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
++++ b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
+@@ -401,12 +401,14 @@ JSCRuntime::~JSCRuntime() {
+   // No need to unprotect nativeStateSymbol_ since the heap is getting torn down
+   // anyway
+   JSGlobalContextRelease(ctx_);
+-#ifndef NDEBUG
+-  assert(
+-      objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
+-  assert(
+-      stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
+-#endif
++// fix issue that app crashes on reload in development mode with JSC engine.
++// details: https://github.com/software-mansion/react-native-reanimated/issues/4783
++// #ifndef NDEBUG
++//   assert(
++//       objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
++//   assert(
++//       stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
++// #endif
+ }
+
+ std::shared_ptr<const jsi::PreparedJavaScript> JSCRuntime::prepareJavaScript(

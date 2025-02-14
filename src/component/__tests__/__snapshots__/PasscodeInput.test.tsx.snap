@@ -1,0 +1,2562 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PasscodeInput Tests should match the snapshot with biometrics disabled 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "marginTop": 20,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 18,
+          "includeFontPadding": false,
+          "marginBottom": 8,
+          "paddingHorizontal": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Enter Passcode
+  </Text>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 40,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          1
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          2
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          3
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          4
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          5
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          6
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          7
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          8
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          9
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "height": 76,
+          "marginHorizontal": 14,
+          "width": 76,
+        }
+      }
+    />
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#222430",
+          "borderRadius": 35,
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 30,
+          }
+        }
+      >
+        0
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="passcode_btn_delete"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+      testID="passcode_btn_delete"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={44}
+        bbWidth={44}
+        color="transparent"
+        fill="transparent"
+        focusable={false}
+        height={44}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        testID="svg-icon-deleteIcon"
+        tintColor="transparent"
+        vbHeight={46}
+        vbWidth={46}
+        width={44}
+        xml="<svg fill="currentColor" height="46" viewBox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg"><path d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z" stroke="#26d2e8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 0,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z"
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "stroke",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={
+              {
+                "payload": 4280734440,
+                "type": 0,
+              }
+            }
+            strokeLinecap={1}
+            strokeLinejoin={1}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PasscodeInput Tests should match the snapshot with default props 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "marginTop": 20,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 18,
+          "includeFontPadding": false,
+          "marginBottom": 8,
+          "paddingHorizontal": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Enter Passcode
+  </Text>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 40,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          1
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          2
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          3
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          4
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          5
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          6
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          7
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          8
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          9
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={44}
+        bbWidth={44}
+        color="transparent"
+        fill="transparent"
+        focusable={false}
+        height={44}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        testID="svg-icon-fingerprint"
+        tintColor="transparent"
+        vbHeight={42}
+        vbWidth={42}
+        width={44}
+        xml="<svg fill="currentColor" height="42" viewBox="0 0 42 42" width="42" xmlns="http://www.w3.org/2000/svg"><path d="m11.8132 21c.0094 3.4428-.7861 6.8402-2.32309 9.9209-.07337.1597-.17807.303-.30789.4215s-.28211.2097-.44785.2682c-.16574.0586-.34154.0832-.51698.0725s-.34694-.0566-.50432-.1348c-.15739-.0783-.29745-.1874-.41188-.3208-.11444-.1334-.20091-.2884-.25429-.4559-.05338-.1674-.07258-.3439-.05646-.5189.01612-.1751.06722-.3451.15029-.5 1.35516-2.7182 2.0563-5.7154 2.0475-8.7527-.00308-1.7711.39366-3.5202 1.16067-5.1166.767-1.5965 1.8844-2.9992 3.269-4.1037.2718-.2176.6188-.3183.9648-.28.3459.0383.6625.2125.8801.4842.2176.2718.3183.6188.28.9648s-.2125.6626-.4843.8801c-1.0771.8588-1.9464 1.9498-2.543 3.1915s-.905 2.6021-.9023 3.9797zm9.1875-1.3125c-.3481 0-.6819.1383-.928.3844-.2462.2462-.3845.58-.3845.9281-.0002 5.1135-1.2986 10.1432-3.7734 14.618-.1688.3046-.2097.6637-.1138.9985.096.3347.3211.6176.6257.7865.3046.1688.6637.2097.9985.1137.3347-.096.6176-.321.7865-.6256 2.6899-4.8646 4.1012-10.3323 4.1015-15.8911 0-.3481-.1382-.6819-.3844-.9281-.2461-.2461-.58-.3844-.9281-.3844zm0-5.25c-1.7405 0-3.4096.6914-4.6404 1.9221-1.2307 1.2307-1.9221 2.8999-1.9221 4.6404 0 .3481.1383.6819.3845.9281.2461.2461.5799.3844.928.3844s.682-.1383.9281-.3844c.2462-.2462.3844-.58.3844-.9281 0-1.0443.4149-2.0458 1.1533-2.7842.7384-.7385 1.7399-1.1533 2.7842-1.1533s2.0458.4148 2.7843 1.1533c.7384.7384 1.1532 1.7399 1.1532 2.7842.0136 5.2188-1.1359 10.375-3.3649 15.0938-.0736.1563-.1156.3255-.1238.4981s.0178.345.0763.5076.1484.312.2647.4398c.1162.1278.2565.2314.4128.305s.3256.1156.4982.1238c.1725.0082.345-.0178.5076-.0763.1625-.0585.312-.1484.4397-.2647.1278-.1162.2315-.2565.3051-.4128 2.3925-5.0696 3.6255-10.6085 3.6093-16.2143 0-1.7405-.6914-3.4097-1.9221-4.6404s-2.8999-1.9221-4.6404-1.9221zm0-10.5c-4.5238.00478-8.8609 1.80396-12.0597 5.00277-3.19881 3.19883-4.99799 7.53593-5.00277 12.05973.00244 1.639-.27499 3.2663-.82031 4.812-.11596.3283-.09676.6892.05339 1.0033s.41893.5558.74723.6717c.3283.116.68922.0968 1.00336-.0534.31414-.1501.55576-.4189.67172-.7472.6439-1.8266.9718-3.7496.96961-5.6864 0-3.8291 1.52109-7.5013 4.22867-10.2089 2.7075-2.70751 6.3798-4.2286 10.2088-4.2286 3.8291 0 7.5013 1.52109 10.2089 4.2286 2.7075 2.7076 4.2286 6.3798 4.2286 10.2089.0007 2.9988-.29 5.9906-.8679 8.9332-.0334.1691-.0332.3432.0007.5122.0338.1691.1007.3298.1967.473.0959.1432.2192.2661.3627.3617s.3044.1619.4735.1953c.0838.0162.169.0245.2543.0246.3038-.0003.598-.106.8325-.2989.2346-.193.3949-.4613.4538-.7593.6112-3.1101.9189-6.2722.9187-9.4418-.0052-4.5237-1.8045-8.8605-5.0032-12.05925-3.1987-3.19872-7.5356-4.99804-12.0593-5.00325zm-5.5125 21.0279c-.3404-.0677-.6937.0021-.9827.1943-.2891.1922-.4902.491-.5595.8311-.5325 2.6211-1.486 5.1387-2.8235 7.455-.174.3015-.2212.6598-.131.9961.0901.3363.3102.623.6117.7971.3016.174.6599.2212.9962.131.3363-.0901.623-.3102.797-.6117 1.4781-2.5614 2.5308-5.3456 3.1172-8.2442.0345-.169.0353-.3432.0025-.5125-.0329-.1694-.0989-.3306-.1941-.4744s-.2179-.2675-.361-.3639c-.143-.0964-.3037-.1637-.4728-.1979zm5.5125-15.7779c-.4936.0001-.9867.03079-1.4765.09188-.339.05088-.6445.23231-.8515.50551-.2069.27321-.2987.61651-.2559.95651.0429.3401.217.6499.4853.8632.2682.2133.6092.3132.9502.2784 1.293-.1607 2.6054-.045 3.8504.3394 1.2449.3845 2.394 1.0291 3.3711 1.891.9772.8619 1.7601 1.9215 2.297 3.1087s.8155 2.4749.8174 3.7779c-.0003 1.7002-.1055 3.3987-.315 5.0859-.023.1716-.0118.3461.0328.5133.0447.1673.1221.3241.2276.4613s.2371.2523.3873.3384c.1502.0862.3159.1418.4876.1636.0545.0065.1093.0098.1641.0098.3192-.0006.6272-.1176.8664-.329.2391-.2114.3931-.5027.433-.8194.2213-1.7962.3309-3.6043.3281-5.4141-.0009-3.1312-1.2435-6.1343-3.4555-8.3505-2.212-2.2163-5.2126-3.46485-8.3439-3.4718zm9.5042 21.041c-.167-.0432-.3409-.053-.5116-.029-.1708.0241-.3352.0816-.4837.1692-.1486.0876-.2784.2036-.3821.3414-.1037.1379-.1792.2948-.2222.4618-.2396.9335-.5168 1.8703-.8204 2.789-.111.3292-.087.689.0667 1.0005.1538.3116.4248.5494.7537.6615.1347.0458.276.0691.4183.0689.275-.0002.543-.0868.7661-.2475.2232-.1608.3902-.3875.4775-.6483.3281-.9712.6218-1.9687.8778-2.9613.0439-.167.0546-.341.0312-.5121s-.0803-.3359-.1675-.4849c-.0872-.1491-.2029-.2795-.3406-.3837-.1376-.1043-.2945-.1803-.4616-.2238z" fill="#727781"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 0,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m11.8132 21c.0094 3.4428-.7861 6.8402-2.32309 9.9209-.07337.1597-.17807.303-.30789.4215s-.28211.2097-.44785.2682c-.16574.0586-.34154.0832-.51698.0725s-.34694-.0566-.50432-.1348c-.15739-.0783-.29745-.1874-.41188-.3208-.11444-.1334-.20091-.2884-.25429-.4559-.05338-.1674-.07258-.3439-.05646-.5189.01612-.1751.06722-.3451.15029-.5 1.35516-2.7182 2.0563-5.7154 2.0475-8.7527-.00308-1.7711.39366-3.5202 1.16067-5.1166.767-1.5965 1.8844-2.9992 3.269-4.1037.2718-.2176.6188-.3183.9648-.28.3459.0383.6625.2125.8801.4842.2176.2718.3183.6188.28.9648s-.2125.6626-.4843.8801c-1.0771.8588-1.9464 1.9498-2.543 3.1915s-.905 2.6021-.9023 3.9797zm9.1875-1.3125c-.3481 0-.6819.1383-.928.3844-.2462.2462-.3845.58-.3845.9281-.0002 5.1135-1.2986 10.1432-3.7734 14.618-.1688.3046-.2097.6637-.1138.9985.096.3347.3211.6176.6257.7865.3046.1688.6637.2097.9985.1137.3347-.096.6176-.321.7865-.6256 2.6899-4.8646 4.1012-10.3323 4.1015-15.8911 0-.3481-.1382-.6819-.3844-.9281-.2461-.2461-.58-.3844-.9281-.3844zm0-5.25c-1.7405 0-3.4096.6914-4.6404 1.9221-1.2307 1.2307-1.9221 2.8999-1.9221 4.6404 0 .3481.1383.6819.3845.9281.2461.2461.5799.3844.928.3844s.682-.1383.9281-.3844c.2462-.2462.3844-.58.3844-.9281 0-1.0443.4149-2.0458 1.1533-2.7842.7384-.7385 1.7399-1.1533 2.7842-1.1533s2.0458.4148 2.7843 1.1533c.7384.7384 1.1532 1.7399 1.1532 2.7842.0136 5.2188-1.1359 10.375-3.3649 15.0938-.0736.1563-.1156.3255-.1238.4981s.0178.345.0763.5076.1484.312.2647.4398c.1162.1278.2565.2314.4128.305s.3256.1156.4982.1238c.1725.0082.345-.0178.5076-.0763.1625-.0585.312-.1484.4397-.2647.1278-.1162.2315-.2565.3051-.4128 2.3925-5.0696 3.6255-10.6085 3.6093-16.2143 0-1.7405-.6914-3.4097-1.9221-4.6404s-2.8999-1.9221-4.6404-1.9221zm0-10.5c-4.5238.00478-8.8609 1.80396-12.0597 5.00277-3.19881 3.19883-4.99799 7.53593-5.00277 12.05973.00244 1.639-.27499 3.2663-.82031 4.812-.11596.3283-.09676.6892.05339 1.0033s.41893.5558.74723.6717c.3283.116.68922.0968 1.00336-.0534.31414-.1501.55576-.4189.67172-.7472.6439-1.8266.9718-3.7496.96961-5.6864 0-3.8291 1.52109-7.5013 4.22867-10.2089 2.7075-2.70751 6.3798-4.2286 10.2088-4.2286 3.8291 0 7.5013 1.52109 10.2089 4.2286 2.7075 2.7076 4.2286 6.3798 4.2286 10.2089.0007 2.9988-.29 5.9906-.8679 8.9332-.0334.1691-.0332.3432.0007.5122.0338.1691.1007.3298.1967.473.0959.1432.2192.2661.3627.3617s.3044.1619.4735.1953c.0838.0162.169.0245.2543.0246.3038-.0003.598-.106.8325-.2989.2346-.193.3949-.4613.4538-.7593.6112-3.1101.9189-6.2722.9187-9.4418-.0052-4.5237-1.8045-8.8605-5.0032-12.05925-3.1987-3.19872-7.5356-4.99804-12.0593-5.00325zm-5.5125 21.0279c-.3404-.0677-.6937.0021-.9827.1943-.2891.1922-.4902.491-.5595.8311-.5325 2.6211-1.486 5.1387-2.8235 7.455-.174.3015-.2212.6598-.131.9961.0901.3363.3102.623.6117.7971.3016.174.6599.2212.9962.131.3363-.0901.623-.3102.797-.6117 1.4781-2.5614 2.5308-5.3456 3.1172-8.2442.0345-.169.0353-.3432.0025-.5125-.0329-.1694-.0989-.3306-.1941-.4744s-.2179-.2675-.361-.3639c-.143-.0964-.3037-.1637-.4728-.1979zm5.5125-15.7779c-.4936.0001-.9867.03079-1.4765.09188-.339.05088-.6445.23231-.8515.50551-.2069.27321-.2987.61651-.2559.95651.0429.3401.217.6499.4853.8632.2682.2133.6092.3132.9502.2784 1.293-.1607 2.6054-.045 3.8504.3394 1.2449.3845 2.394 1.0291 3.3711 1.891.9772.8619 1.7601 1.9215 2.297 3.1087s.8155 2.4749.8174 3.7779c-.0003 1.7002-.1055 3.3987-.315 5.0859-.023.1716-.0118.3461.0328.5133.0447.1673.1221.3241.2276.4613s.2371.2523.3873.3384c.1502.0862.3159.1418.4876.1636.0545.0065.1093.0098.1641.0098.3192-.0006.6272-.1176.8664-.329.2391-.2114.3931-.5027.433-.8194.2213-1.7962.3309-3.6043.3281-5.4141-.0009-3.1312-1.2435-6.1343-3.4555-8.3505-2.212-2.2163-5.2126-3.46485-8.3439-3.4718zm9.5042 21.041c-.167-.0432-.3409-.053-.5116-.029-.1708.0241-.3352.0816-.4837.1692-.1486.0876-.2784.2036-.3821.3414-.1037.1379-.1792.2948-.2222.4618-.2396.9335-.5168 1.8703-.8204 2.789-.111.3292-.087.689.0667 1.0005.1538.3116.4248.5494.7537.6615.1347.0458.276.0691.4183.0689.275-.0002.543-.0868.7661-.2475.2232-.1608.3902-.3875.4775-.6483.3281-.9712.6218-1.9687.8778-2.9613.0439-.167.0546-.341.0312-.5121s-.0803-.3359-.1675-.4849c-.0872-.1491-.2029-.2795-.3406-.3837-.1376-.1043-.2945-.1803-.4616-.2238z"
+            fill={
+              {
+                "payload": 4285691777,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#222430",
+          "borderRadius": 35,
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 30,
+          }
+        }
+      >
+        0
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="passcode_btn_delete"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+      testID="passcode_btn_delete"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={44}
+        bbWidth={44}
+        color="transparent"
+        fill="transparent"
+        focusable={false}
+        height={44}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        testID="svg-icon-deleteIcon"
+        tintColor="transparent"
+        vbHeight={46}
+        vbWidth={46}
+        width={44}
+        xml="<svg fill="currentColor" height="46" viewBox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg"><path d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z" stroke="#26d2e8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 0,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z"
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "stroke",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={
+              {
+                "payload": 4280734440,
+                "type": 0,
+              }
+            }
+            strokeLinecap={1}
+            strokeLinejoin={1}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PasscodeInput Tests should match the snapshot with description and biometrics enabled 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "marginTop": 20,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#ffffff",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 18,
+          "includeFontPadding": false,
+          "marginBottom": 8,
+          "paddingHorizontal": 14,
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    Enter Passcode
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#707785",
+        "fontSize": 14,
+        "marginBottom": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Please enter your 4-digit passcode.
+  </Text>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 40,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 12,
+            "margin": 4,
+            "width": 12,
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          1
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          2
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          3
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          4
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          5
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          6
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          7
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          8
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#222430",
+            "borderRadius": 35,
+            "height": 76,
+            "justifyContent": "center",
+            "marginHorizontal": 14,
+            "opacity": 1,
+            "width": 76,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 30,
+            }
+          }
+        >
+          9
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={44}
+        bbWidth={44}
+        color="transparent"
+        fill="transparent"
+        focusable={false}
+        height={44}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        testID="svg-icon-fingerprint"
+        tintColor="transparent"
+        vbHeight={42}
+        vbWidth={42}
+        width={44}
+        xml="<svg fill="currentColor" height="42" viewBox="0 0 42 42" width="42" xmlns="http://www.w3.org/2000/svg"><path d="m11.8132 21c.0094 3.4428-.7861 6.8402-2.32309 9.9209-.07337.1597-.17807.303-.30789.4215s-.28211.2097-.44785.2682c-.16574.0586-.34154.0832-.51698.0725s-.34694-.0566-.50432-.1348c-.15739-.0783-.29745-.1874-.41188-.3208-.11444-.1334-.20091-.2884-.25429-.4559-.05338-.1674-.07258-.3439-.05646-.5189.01612-.1751.06722-.3451.15029-.5 1.35516-2.7182 2.0563-5.7154 2.0475-8.7527-.00308-1.7711.39366-3.5202 1.16067-5.1166.767-1.5965 1.8844-2.9992 3.269-4.1037.2718-.2176.6188-.3183.9648-.28.3459.0383.6625.2125.8801.4842.2176.2718.3183.6188.28.9648s-.2125.6626-.4843.8801c-1.0771.8588-1.9464 1.9498-2.543 3.1915s-.905 2.6021-.9023 3.9797zm9.1875-1.3125c-.3481 0-.6819.1383-.928.3844-.2462.2462-.3845.58-.3845.9281-.0002 5.1135-1.2986 10.1432-3.7734 14.618-.1688.3046-.2097.6637-.1138.9985.096.3347.3211.6176.6257.7865.3046.1688.6637.2097.9985.1137.3347-.096.6176-.321.7865-.6256 2.6899-4.8646 4.1012-10.3323 4.1015-15.8911 0-.3481-.1382-.6819-.3844-.9281-.2461-.2461-.58-.3844-.9281-.3844zm0-5.25c-1.7405 0-3.4096.6914-4.6404 1.9221-1.2307 1.2307-1.9221 2.8999-1.9221 4.6404 0 .3481.1383.6819.3845.9281.2461.2461.5799.3844.928.3844s.682-.1383.9281-.3844c.2462-.2462.3844-.58.3844-.9281 0-1.0443.4149-2.0458 1.1533-2.7842.7384-.7385 1.7399-1.1533 2.7842-1.1533s2.0458.4148 2.7843 1.1533c.7384.7384 1.1532 1.7399 1.1532 2.7842.0136 5.2188-1.1359 10.375-3.3649 15.0938-.0736.1563-.1156.3255-.1238.4981s.0178.345.0763.5076.1484.312.2647.4398c.1162.1278.2565.2314.4128.305s.3256.1156.4982.1238c.1725.0082.345-.0178.5076-.0763.1625-.0585.312-.1484.4397-.2647.1278-.1162.2315-.2565.3051-.4128 2.3925-5.0696 3.6255-10.6085 3.6093-16.2143 0-1.7405-.6914-3.4097-1.9221-4.6404s-2.8999-1.9221-4.6404-1.9221zm0-10.5c-4.5238.00478-8.8609 1.80396-12.0597 5.00277-3.19881 3.19883-4.99799 7.53593-5.00277 12.05973.00244 1.639-.27499 3.2663-.82031 4.812-.11596.3283-.09676.6892.05339 1.0033s.41893.5558.74723.6717c.3283.116.68922.0968 1.00336-.0534.31414-.1501.55576-.4189.67172-.7472.6439-1.8266.9718-3.7496.96961-5.6864 0-3.8291 1.52109-7.5013 4.22867-10.2089 2.7075-2.70751 6.3798-4.2286 10.2088-4.2286 3.8291 0 7.5013 1.52109 10.2089 4.2286 2.7075 2.7076 4.2286 6.3798 4.2286 10.2089.0007 2.9988-.29 5.9906-.8679 8.9332-.0334.1691-.0332.3432.0007.5122.0338.1691.1007.3298.1967.473.0959.1432.2192.2661.3627.3617s.3044.1619.4735.1953c.0838.0162.169.0245.2543.0246.3038-.0003.598-.106.8325-.2989.2346-.193.3949-.4613.4538-.7593.6112-3.1101.9189-6.2722.9187-9.4418-.0052-4.5237-1.8045-8.8605-5.0032-12.05925-3.1987-3.19872-7.5356-4.99804-12.0593-5.00325zm-5.5125 21.0279c-.3404-.0677-.6937.0021-.9827.1943-.2891.1922-.4902.491-.5595.8311-.5325 2.6211-1.486 5.1387-2.8235 7.455-.174.3015-.2212.6598-.131.9961.0901.3363.3102.623.6117.7971.3016.174.6599.2212.9962.131.3363-.0901.623-.3102.797-.6117 1.4781-2.5614 2.5308-5.3456 3.1172-8.2442.0345-.169.0353-.3432.0025-.5125-.0329-.1694-.0989-.3306-.1941-.4744s-.2179-.2675-.361-.3639c-.143-.0964-.3037-.1637-.4728-.1979zm5.5125-15.7779c-.4936.0001-.9867.03079-1.4765.09188-.339.05088-.6445.23231-.8515.50551-.2069.27321-.2987.61651-.2559.95651.0429.3401.217.6499.4853.8632.2682.2133.6092.3132.9502.2784 1.293-.1607 2.6054-.045 3.8504.3394 1.2449.3845 2.394 1.0291 3.3711 1.891.9772.8619 1.7601 1.9215 2.297 3.1087s.8155 2.4749.8174 3.7779c-.0003 1.7002-.1055 3.3987-.315 5.0859-.023.1716-.0118.3461.0328.5133.0447.1673.1221.3241.2276.4613s.2371.2523.3873.3384c.1502.0862.3159.1418.4876.1636.0545.0065.1093.0098.1641.0098.3192-.0006.6272-.1176.8664-.329.2391-.2114.3931-.5027.433-.8194.2213-1.7962.3309-3.6043.3281-5.4141-.0009-3.1312-1.2435-6.1343-3.4555-8.3505-2.212-2.2163-5.2126-3.46485-8.3439-3.4718zm9.5042 21.041c-.167-.0432-.3409-.053-.5116-.029-.1708.0241-.3352.0816-.4837.1692-.1486.0876-.2784.2036-.3821.3414-.1037.1379-.1792.2948-.2222.4618-.2396.9335-.5168 1.8703-.8204 2.789-.111.3292-.087.689.0667 1.0005.1538.3116.4248.5494.7537.6615.1347.0458.276.0691.4183.0689.275-.0002.543-.0868.7661-.2475.2232-.1608.3902-.3875.4775-.6483.3281-.9712.6218-1.9687.8778-2.9613.0439-.167.0546-.341.0312-.5121s-.0803-.3359-.1675-.4849c-.0872-.1491-.2029-.2795-.3406-.3837-.1376-.1043-.2945-.1803-.4616-.2238z" fill="#727781"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 0,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m11.8132 21c.0094 3.4428-.7861 6.8402-2.32309 9.9209-.07337.1597-.17807.303-.30789.4215s-.28211.2097-.44785.2682c-.16574.0586-.34154.0832-.51698.0725s-.34694-.0566-.50432-.1348c-.15739-.0783-.29745-.1874-.41188-.3208-.11444-.1334-.20091-.2884-.25429-.4559-.05338-.1674-.07258-.3439-.05646-.5189.01612-.1751.06722-.3451.15029-.5 1.35516-2.7182 2.0563-5.7154 2.0475-8.7527-.00308-1.7711.39366-3.5202 1.16067-5.1166.767-1.5965 1.8844-2.9992 3.269-4.1037.2718-.2176.6188-.3183.9648-.28.3459.0383.6625.2125.8801.4842.2176.2718.3183.6188.28.9648s-.2125.6626-.4843.8801c-1.0771.8588-1.9464 1.9498-2.543 3.1915s-.905 2.6021-.9023 3.9797zm9.1875-1.3125c-.3481 0-.6819.1383-.928.3844-.2462.2462-.3845.58-.3845.9281-.0002 5.1135-1.2986 10.1432-3.7734 14.618-.1688.3046-.2097.6637-.1138.9985.096.3347.3211.6176.6257.7865.3046.1688.6637.2097.9985.1137.3347-.096.6176-.321.7865-.6256 2.6899-4.8646 4.1012-10.3323 4.1015-15.8911 0-.3481-.1382-.6819-.3844-.9281-.2461-.2461-.58-.3844-.9281-.3844zm0-5.25c-1.7405 0-3.4096.6914-4.6404 1.9221-1.2307 1.2307-1.9221 2.8999-1.9221 4.6404 0 .3481.1383.6819.3845.9281.2461.2461.5799.3844.928.3844s.682-.1383.9281-.3844c.2462-.2462.3844-.58.3844-.9281 0-1.0443.4149-2.0458 1.1533-2.7842.7384-.7385 1.7399-1.1533 2.7842-1.1533s2.0458.4148 2.7843 1.1533c.7384.7384 1.1532 1.7399 1.1532 2.7842.0136 5.2188-1.1359 10.375-3.3649 15.0938-.0736.1563-.1156.3255-.1238.4981s.0178.345.0763.5076.1484.312.2647.4398c.1162.1278.2565.2314.4128.305s.3256.1156.4982.1238c.1725.0082.345-.0178.5076-.0763.1625-.0585.312-.1484.4397-.2647.1278-.1162.2315-.2565.3051-.4128 2.3925-5.0696 3.6255-10.6085 3.6093-16.2143 0-1.7405-.6914-3.4097-1.9221-4.6404s-2.8999-1.9221-4.6404-1.9221zm0-10.5c-4.5238.00478-8.8609 1.80396-12.0597 5.00277-3.19881 3.19883-4.99799 7.53593-5.00277 12.05973.00244 1.639-.27499 3.2663-.82031 4.812-.11596.3283-.09676.6892.05339 1.0033s.41893.5558.74723.6717c.3283.116.68922.0968 1.00336-.0534.31414-.1501.55576-.4189.67172-.7472.6439-1.8266.9718-3.7496.96961-5.6864 0-3.8291 1.52109-7.5013 4.22867-10.2089 2.7075-2.70751 6.3798-4.2286 10.2088-4.2286 3.8291 0 7.5013 1.52109 10.2089 4.2286 2.7075 2.7076 4.2286 6.3798 4.2286 10.2089.0007 2.9988-.29 5.9906-.8679 8.9332-.0334.1691-.0332.3432.0007.5122.0338.1691.1007.3298.1967.473.0959.1432.2192.2661.3627.3617s.3044.1619.4735.1953c.0838.0162.169.0245.2543.0246.3038-.0003.598-.106.8325-.2989.2346-.193.3949-.4613.4538-.7593.6112-3.1101.9189-6.2722.9187-9.4418-.0052-4.5237-1.8045-8.8605-5.0032-12.05925-3.1987-3.19872-7.5356-4.99804-12.0593-5.00325zm-5.5125 21.0279c-.3404-.0677-.6937.0021-.9827.1943-.2891.1922-.4902.491-.5595.8311-.5325 2.6211-1.486 5.1387-2.8235 7.455-.174.3015-.2212.6598-.131.9961.0901.3363.3102.623.6117.7971.3016.174.6599.2212.9962.131.3363-.0901.623-.3102.797-.6117 1.4781-2.5614 2.5308-5.3456 3.1172-8.2442.0345-.169.0353-.3432.0025-.5125-.0329-.1694-.0989-.3306-.1941-.4744s-.2179-.2675-.361-.3639c-.143-.0964-.3037-.1637-.4728-.1979zm5.5125-15.7779c-.4936.0001-.9867.03079-1.4765.09188-.339.05088-.6445.23231-.8515.50551-.2069.27321-.2987.61651-.2559.95651.0429.3401.217.6499.4853.8632.2682.2133.6092.3132.9502.2784 1.293-.1607 2.6054-.045 3.8504.3394 1.2449.3845 2.394 1.0291 3.3711 1.891.9772.8619 1.7601 1.9215 2.297 3.1087s.8155 2.4749.8174 3.7779c-.0003 1.7002-.1055 3.3987-.315 5.0859-.023.1716-.0118.3461.0328.5133.0447.1673.1221.3241.2276.4613s.2371.2523.3873.3384c.1502.0862.3159.1418.4876.1636.0545.0065.1093.0098.1641.0098.3192-.0006.6272-.1176.8664-.329.2391-.2114.3931-.5027.433-.8194.2213-1.7962.3309-3.6043.3281-5.4141-.0009-3.1312-1.2435-6.1343-3.4555-8.3505-2.212-2.2163-5.2126-3.46485-8.3439-3.4718zm9.5042 21.041c-.167-.0432-.3409-.053-.5116-.029-.1708.0241-.3352.0816-.4837.1692-.1486.0876-.2784.2036-.3821.3414-.1037.1379-.1792.2948-.2222.4618-.2396.9335-.5168 1.8703-.8204 2.789-.111.3292-.087.689.0667 1.0005.1538.3116.4248.5494.7537.6615.1347.0458.276.0691.4183.0689.275-.0002.543-.0868.7661-.2475.2232-.1608.3902-.3875.4775-.6483.3281-.9712.6218-1.9687.8778-2.9613.0439-.167.0546-.341.0312-.5121s-.0803-.3359-.1675-.4849c-.0872-.1491-.2029-.2795-.3406-.3837-.1376-.1043-.2945-.1803-.4616-.2238z"
+            fill={
+              {
+                "payload": 4285691777,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#222430",
+          "borderRadius": 35,
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 30,
+          }
+        }
+      >
+        0
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="passcode_btn_delete"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 76,
+          "justifyContent": "center",
+          "marginHorizontal": 14,
+          "opacity": 1,
+          "width": 76,
+        }
+      }
+      testID="passcode_btn_delete"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={44}
+        bbWidth={44}
+        color="transparent"
+        fill="transparent"
+        focusable={false}
+        height={44}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {},
+            {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        testID="svg-icon-deleteIcon"
+        tintColor="transparent"
+        vbHeight={46}
+        vbWidth={46}
+        width={44}
+        xml="<svg fill="currentColor" height="46" viewBox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg"><path d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z" stroke="#26d2e8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 0,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="m23.0005 17.25 5.75 5.75m0 0 5.75 5.75m-5.75-5.75-5.75 5.75m5.75-5.75 5.75-5.75m-31.02953 7.7829 11.50003 11.5c.5391.5392 1.2704.8421 2.0329.8421h24.6841c1.5879 0 2.875-1.2872 2.875-2.875v-23c0-1.58782-1.2871-2.875-2.875-2.875h-24.6841c-.7625 0-1.4938.3029-2.0329.84207l-11.50002 11.50003c-1.12276 1.1227-1.12276 2.9431-.00001 4.0658z"
+            fill={
+              {
+                "payload": 4278190080,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "stroke",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={
+              {
+                "payload": 4280734440,
+                "type": 0,
+              }
+            }
+            strokeLinecap={1}
+            strokeLinejoin={1}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;

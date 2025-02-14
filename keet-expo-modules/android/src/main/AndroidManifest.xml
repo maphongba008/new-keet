@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.keet">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application>
+        <service
+            android:name=".KeetFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver android:name=".DismissNotificationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="io.keet.DISMISS_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoomPairingTitle render correctly 1`] = `
+<View
+  style={
+    {
+      "height": {
+        "callback": undefined,
+        "current": 0,
+        "easing": [Function],
+        "onFrame": [Function],
+        "onStart": [Function],
+        "progress": 0,
+        "reduceMotion": undefined,
+        "startTime": 0,
+        "startValue": 0,
+        "toValue": 0,
+        "type": "timing",
+      },
+      "opacity": {
+        "callback": undefined,
+        "current": 0,
+        "easing": [Function],
+        "onFrame": [Function],
+        "onStart": [Function],
+        "progress": 0,
+        "reduceMotion": undefined,
+        "startTime": 0,
+        "startValue": 0,
+        "toValue": 0,
+        "type": "timing",
+      },
+    }
+  }
+>
+  <View
+    accessibilityLabel="lobby_joining_rooms"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "opacity": 1,
+        },
+        {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#222430",
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        },
+      ]
+    }
+    testID="lobby_joining_rooms"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      color="#ffffff"
+      fill="#ffffff"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="svg-icon-clock"
+      tintColor="#ffffff"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.438A9.562 9.562 0 1 0 21.563 12 9.574 9.574 0 0 0 12 2.438m0 18A8.438 8.438 0 1 1 20.438 12 8.447 8.447 0 0 1 12 20.438M17.813 12a.563.563 0 0 1-.563.563H12a.56.56 0 0 1-.562-.563V6.75a.563.563 0 0 1 1.124 0v4.688h4.688a.563.563 0 0 1 .563.562" fill="#fff"/></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4294967295,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="M12 2.438A9.562 9.562 0 1 0 21.563 12 9.574 9.574 0 0 0 12 2.438m0 18A8.438 8.438 0 1 1 20.438 12 8.447 8.447 0 0 1 12 20.438M17.813 12a.563.563 0 0 1-.563.563H12a.56.56 0 0 1-.562-.563V6.75a.563.563 0 0 1 1.124 0v4.688h4.688a.563.563 0 0 1 .563.562"
+          fill={
+            {
+              "payload": 4294967295,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <Text
+      style={
+        {
+          "color": "#ffffff",
+          "flex": 1,
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "marginLeft": 12,
+          "writingDirection": "ltr",
+        }
+      }
+    >
+      Joining rooms
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#26D2E8",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "writingDirection": "ltr",
+        }
+      }
+    >
+      1
+    </Text>
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={24}
+      bbWidth={24}
+      color="#A0A8B8"
+      fill="#A0A8B8"
+      focusable={false}
+      height={24}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      testID="svg-icon-chevronRight"
+      tintColor="#A0A8B8"
+      vbHeight={24}
+      vbWidth={24}
+      width={24}
+      xml="<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m17.031 12.531-7.49996 7.5c-.06968.0697-.15241.125-.24345.1627-.09105.0377-.18863.0571-.28717.0571-.09855 0-.19613-.0194-.28718-.0571-.09104-.0377-.17377-.093-.24345-.1627-.06968-.0696-.12496-.1524-.16267-.2434-.03771-.0911-.05712-.1886-.05712-.2872 0-.0985.01941-.1961.05712-.2872.03771-.091.09299-.1737.16267-.2434l6.97031-6.9694-6.97031-6.96936c-.14073-.14073-.21979-.3316-.21979-.53062 0-.19903.07906-.3899.21979-.53063s.3316-.21979.53063-.21979c.19902 0 .38989.07906.53062.21979l7.49996 7.50001c.0698.0696.1251.1524.1628.2434.0378.0911.0572.1887.0572.2872 0 .0986-.0194.1962-.0572.2872-.0377.0911-.093.1738-.1628.2434z"/></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4288719032,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="m17.031 12.531-7.49996 7.5c-.06968.0697-.15241.125-.24345.1627-.09105.0377-.18863.0571-.28717.0571-.09855 0-.19613-.0194-.28718-.0571-.09104-.0377-.17377-.093-.24345-.1627-.06968-.0696-.12496-.1524-.16267-.2434-.03771-.0911-.05712-.1886-.05712-.2872 0-.0985.01941-.1961.05712-.2872.03771-.091.09299-.1737.16267-.2434l6.97031-6.9694-6.97031-6.96936c-.14073-.14073-.21979-.3316-.21979-.53062 0-.19903.07906-.3899.21979-.53063s.3316-.21979.53063-.21979c.19902 0 .38989.07906.53062.21979l7.49996 7.50001c.0698.0696.1251.1524.1628.2434.0378.0911.0572.1887.0572.2872 0 .0986-.0194.1962-.0572.2872-.0377.0911-.093.1738-.1628.2434z"
+          fill={
+            {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`RoomPairingTitle render correctly with no rooms pairing 1`] = `
+<View
+  style={
+    {
+      "height": {
+        "callback": undefined,
+        "current": 0,
+        "easing": [Function],
+        "onFrame": [Function],
+        "onStart": [Function],
+        "progress": 0,
+        "reduceMotion": undefined,
+        "startTime": 0,
+        "startValue": 0,
+        "toValue": 0,
+        "type": "timing",
+      },
+      "opacity": {
+        "callback": undefined,
+        "current": 0,
+        "easing": [Function],
+        "onFrame": [Function],
+        "onStart": [Function],
+        "progress": 0,
+        "reduceMotion": undefined,
+        "startTime": 0,
+        "startValue": 0,
+        "toValue": 0,
+        "type": "timing",
+      },
+    }
+  }
+>
+  <View
+    accessibilityLabel="lobby_joining_rooms"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "opacity": 1,
+        },
+        {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#222430",
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        },
+      ]
+    }
+    testID="lobby_joining_rooms"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      color="#ffffff"
+      fill="#ffffff"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="svg-icon-clock"
+      tintColor="#ffffff"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.438A9.562 9.562 0 1 0 21.563 12 9.574 9.574 0 0 0 12 2.438m0 18A8.438 8.438 0 1 1 20.438 12 8.447 8.447 0 0 1 12 20.438M17.813 12a.563.563 0 0 1-.563.563H12a.56.56 0 0 1-.562-.563V6.75a.563.563 0 0 1 1.124 0v4.688h4.688a.563.563 0 0 1 .563.562" fill="#fff"/></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4294967295,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="M12 2.438A9.562 9.562 0 1 0 21.563 12 9.574 9.574 0 0 0 12 2.438m0 18A8.438 8.438 0 1 1 20.438 12 8.447 8.447 0 0 1 12 20.438M17.813 12a.563.563 0 0 1-.563.563H12a.56.56 0 0 1-.562-.563V6.75a.563.563 0 0 1 1.124 0v4.688h4.688a.563.563 0 0 1 .563.562"
+          fill={
+            {
+              "payload": 4294967295,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <Text
+      style={
+        {
+          "color": "#ffffff",
+          "flex": 1,
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "marginLeft": 12,
+          "writingDirection": "ltr",
+        }
+      }
+    >
+      Joining rooms
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#26D2E8",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 14,
+          "includeFontPadding": false,
+          "writingDirection": "ltr",
+        }
+      }
+    >
+      0
+    </Text>
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={24}
+      bbWidth={24}
+      color="#A0A8B8"
+      fill="#A0A8B8"
+      focusable={false}
+      height={24}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {},
+          {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      testID="svg-icon-chevronRight"
+      tintColor="#A0A8B8"
+      vbHeight={24}
+      vbWidth={24}
+      width={24}
+      xml="<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m17.031 12.531-7.49996 7.5c-.06968.0697-.15241.125-.24345.1627-.09105.0377-.18863.0571-.28717.0571-.09855 0-.19613-.0194-.28718-.0571-.09104-.0377-.17377-.093-.24345-.1627-.06968-.0696-.12496-.1524-.16267-.2434-.03771-.0911-.05712-.1886-.05712-.2872 0-.0985.01941-.1961.05712-.2872.03771-.091.09299-.1737.16267-.2434l6.97031-6.9694-6.97031-6.96936c-.14073-.14073-.21979-.3316-.21979-.53062 0-.19903.07906-.3899.21979-.53063s.3316-.21979.53063-.21979c.19902 0 .38989.07906.53062.21979l7.49996 7.50001c.0698.0696.1251.1524.1628.2434.0378.0911.0572.1887.0572.2872 0 .0986-.0194.1962-.0572.2872-.0377.0911-.093.1738-.1628.2434z"/></svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4288719032,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="m17.031 12.531-7.49996 7.5c-.06968.0697-.15241.125-.24345.1627-.09105.0377-.18863.0571-.28717.0571-.09855 0-.19613-.0194-.28718-.0571-.09104-.0377-.17377-.093-.24345-.1627-.06968-.0696-.12496-.1524-.16267-.2434-.03771-.0911-.05712-.1886-.05712-.2872 0-.0985.01941-.1961.05712-.2872.03771-.091.09299-.1737.16267-.2434l6.97031-6.9694-6.97031-6.96936c-.14073-.14073-.21979-.3316-.21979-.53062 0-.19903.07906-.3899.21979-.53063s.3316-.21979.53063-.21979c.19902 0 .38989.07906.53062.21979l7.49996 7.50001c.0698.0696.1251.1524.1628.2434.0378.0911.0572.1887.0572.2872 0 .0986-.0194.1962-.0572.2872-.0377.0911-.093.1738-.1628.2434z"
+          fill={
+            {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
